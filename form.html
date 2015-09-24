@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: pink</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+  </head>
+  <body>
+   
+    <div class="contest-header">
+      <header class="main-header">
+        <h1>Pink</h1>
+        <a href="#">open/close menu</a>
+        <nav class="main-navigation">
+          <ul>
+            <li>
+              <a href="#">Информация</a>
+            </li>
+            <li>
+              <a href="#">Блог</a>
+            </li>
+            <li>
+              <a href="#">Отзывы</a>
+            </li>
+            <li class="active">
+              <a href="#">Конкурс</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <p>Конкурс на самое безбашеное путешествие с Пинк</p>
+    </div>
+
+    <div class="contest-text">
+      <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните</p>
+    </div>
+    
+    <form class="contest-form" action="#" method="get" enctype="multipart/form-data">
+
+      <fieldset class="competitor-name">
+        <label for="name">Имя: *</label>
+        <input type="text" name="name" value="" placeholder="Введите ваше имя" required id=name>
+        <label for="surname">Фамилия: *</label>
+        <input type="text" name="surname" value="" placeholder="Укажите фамилию" required id=surname>
+        <label for="patronymic">Отчество:</label>
+        <input type="text" name="patronymic" value="" placeholder="Ну и отчество тоже" id=patronymic>
+      </fieldset>
+
+      <fieldset class="application-type">
+        <legend>С каким приложением путешествовали? *</legend>
+        <label><input type="radio" name="app-type" value="iOS" checked required> Pink для iOS</label>
+        <label><input type="radio" name="app-type" value="Android" required> Pink на Android</label>
+        <label><input type="radio" name="app-type" value="Windows" required> Windows Phone</label>
+      </fieldset>
+     
+      <fieldset class="travel-time">
+        <legend>Когда вы путешествовали? *</legend>
+        <input type="text" name="travel-start" value="1 апреля 2015" id=travel-start required>
+        <label for="travel-start">дата выезда</label>
+        <span class="decrease-days"></span>
+        <input type="text" name="travel-days" value="10" id="travel-days" required>
+        <span class="increase-days"></span>
+        <label for="travel-days">Продолжительность</label>
+        <input type="text" name="travel-end" value="1 апреля 2015" id=travel-end required>
+        <label for="travel-end">Дата Возвращения</label>
+      </fieldset>
+
+      <fieldset class="companions">
+        <legend>Количество попутчиков *</legend>
+        <span class="decrease-companions"></span>
+        <input type="text" name="companions" value="2" id="companions" required>
+        <span class="increase-companions"></span>
+        <hr>
+        <div class="companion companion-1">
+          <span>№</span>
+          <span class="companion-number">1</span>
+          <label for="companion1-name">Имя: *</label>
+          <input type="text" name="companion1-name" value="" placeholder="Введите ваше имя" required id=companion1-name>
+          <label for="companion1-nickname">ПРОЗВИЩЕ:</label>
+          <input type="text" name="companion1-nickname" value="" placeholder="Ну как же без этого!" id=companion1-nickname>
+        </div>
+        <div class="companion companion-2">
+          <span>№</span>
+          <span class="companion-number">2</span>
+          <label for="companion2-name">Имя: *</label>
+          <input type="text" name="companion2-name" value="" placeholder="Введите ваше имя" required id=companion2-name>
+          <label for="companion2-nickname">ПРОЗВИЩЕ:</label>
+          <input type="text" name="companion2-nickname" value="" placeholder="Ну как же без этого!" id=companion2-nickname>
+        </div>
+      </fieldset>
+      
+      <fieldset class="achievements">
+        <legend>Ваши безбашенные достижения в путешествии</legend>
+        <label><input type="checkbox" name="shark-self" value="shark-self" checked> Сделал селфи с акулой</label>
+        <label><input type="checkbox" name="beach-burned" value="beach-burned" checked> Обгорел на пляже</label>
+        <label><input type="checkbox" name="saw-chuck-norris" value="saw-chuck-norris"> Видел Чака Норриса</label>
+        <label><input type="checkbox" name="souvenirs" value="souvenirs"> Накупил сувениров</label>
+        <label><input type="checkbox" name="hold-tower" value="hold-tower"> Удержал башню</label>
+        <label><input type="checkbox" name="crushed-hotel" value="crushed-hotel" checked> Разгромил отель</label>
+      </fieldset>
+      
+      <fieldset class="photos">
+        <legend>ВАШИ ФОТОГРАФИИ из поездки *</legend>
+        <label for="add-photo">ЗАГРУЗИТЬ ФОТО</label>
+        <input type=file name=add-photo id=add-photo>
+        <hr>
+        <img src="http://placehold.it/50x50" width="50" height="50" alt="img-1">
+        <a href="#">delete picture</a>
+        <img src="http://placehold.it/50x50" width="50" height="50" alt="img-2">
+        <a href="#">delete picture</a>
+        <img src="http://placehold.it/50x50" width="50" height="50" alt="img-3">
+        <a href="#">delete picture</a>
+        <img src="http://placehold.it/50x50" width="50" height="50" alt="img-4">
+        <a href="#">delete picture</a>
+        <img src="http://placehold.it/50x50" width="50" height="50" alt="img-5">
+        <a href="#">delete picture</a>
+        <img src="http://placehold.it/50x50" width="50" height="50" alt="img-5">
+        <a href="#">delete picture</a>
+        <img src="http://placehold.it/50x50" width="50" height="50" alt="img-7">
+        <a href="#">delete picture</a>
+        <img src="http://placehold.it/50x50" width="50" height="50" alt="img-8">
+        <a href="#">delete picture</a>
+      </fieldset>
+
+      <input name="contest-submit" type="submit" value="Отправить форму">
+      <div>* — обязательные поля</div>
+      
+    </form>
+    
+    <footer class="contest-footer">
+      <div class="pink-logo">
+        <img src="http://placehold.it/50x50" width="50" height="50" alt="pink logo">
+        <span>pink</span>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-btn social-btn-tw">twitter</a>
+        <a href="#" class="social-btn social-btn-fb">facebook</a>
+        <a href="#" class="social-btn social-btn-you">youtube</a>
+      </div>
+      <div class="footer-copyright">
+        <p>Разработано</p>
+        <a href="#"><img src="http://placehold.it/50x50" width="50" height="50" alt="HTML Academy"></a>
+      </div>
+    </footer>
+    <!-- <script src="js/script.js"></script> -->
+
+  </body>
+</html>
