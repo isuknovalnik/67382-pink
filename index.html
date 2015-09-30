@@ -7,97 +7,107 @@
   </head>
   <body>
    
-    <div class="intro-header">
+    <div class="promo-page-header">
       <header class="main-header">
-        <a class="logo" href="#">Pink</a>
-        <a href="#">open/close menu</a>
-        <nav class="main-navigation">
-          <ul>
-            <li class="active">
+        <a class="main-header__logo-link" href="#">Pink</a>
+        <nav class="main-nav">
+          <a class="main-nav__toggle  main-nav__toggle--close" href="#">open/close menu</a>
+          <ul class="main-nav__list">
+            <li class="main-nav__item  main-nav__item--active">
               <a href="#">Информация</a>
             </li>
-            <li>
+            <li class="main-nav__item">
               <a href="#">Блог</a>
             </li>
-            <li>
+            <li class="main-nav__item">
               <a href="#">Отзывы</a>
             </li>
-            <li>
+            <li class="main-nav__item">
               <a href="#">Конкурс</a>
             </li>
           </ul>
         </nav>
       </header>
-      <h2>Взгляните на жизнь иначе!</h2>
+      <h2 class="promo-page-header__text">Взгляните на жизнь иначе!</h2>
     </div>
     
-    <div class="download-block">
-      <a href="#" class="btn">Скачать приложение</a>
-      <img src="http://placehold.it/50x50" width="50" height="50" alt="iOS">
-      <img src="http://placehold.it/50x50" width="50" height="50" alt="Android">
-      <img src="http://placehold.it/50x50" width="50" height="50" alt="Windows">
-      <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-    </div>
+    <section class="download">
+      <a href="#" class="download__button">Скачать приложение</a>
+      <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+    </section>
+
+    <section class="promo-page-content">
+      <p class="promo-page-content__text">Устали от серости мегаполиса?</p>
+      <p class="promo-page-content__text">Нам есть, что вам предложить!</p>
+    </section>
     
-    <div class="main-block">
-      <p>Устали от серости мегаполиса?</p>
-      <p>Нам есть, что вам предложить!</p>
-    </div>
+    <section class="features">
+      <div class="features__item features__item--mood">
+        <h3 class="features__title">Поднимает настроение</h3>
+        <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+      </div>
+      <div class="features__item features__item--change">
+        <h3 class="features__title">Меняет мир вокруг</h3>
+        <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+      </div>
+      <div class="features__item features__item--friends">
+        <h3 class="features__title">Заводит новых друзей</h3>
+        <p class="features__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+      </div>
+    </section>
     
-    <div class="features-block">
-      <div class="features-item mood-feature">
-        <h3 class="features-title">Поднимает настроение</h3>
-        <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+    <section class="reviews">
+      <div class="slider-reviews">
+        <article class="slider-reviews__item">
+          <h1 class="slider-reviews__header">Николай Петров</h1>
+          <p class="slider-reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </article>
+        <article class="slider-reviews__item"></article>
+        <article class="slider-reviews__item"></article>
+        <div class="slider-reviews__pagination">
+          <span class="slider-reviews__pagination-item-active"></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-      <div class="features-item change-feature">
-        <h3 class="features-title">Меняет мир вокруг</h3>
-        <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-      </div>
-      <div class="features-item friends-feature">
-        <h3 class="features-title">Заводит новых друзей</h3>
-        <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-      </div>
-    </div>
+    </section>
     
-    <article class="review-block">
-      <h1 class="reviewer-name">Николай Петров</h1>
-      <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-      <div class="review-slider">
-        <span class="active"></span>
-        <span></span>
-        <span></span>
+    <section class="price">
+      <div class="slider-price">
+        <section class="slider-price__item"></section>
+        <section class="slider-price__item">
+          <div class="slider-price__flag slider-price__flag--hit">ХИТ</div>
+          <div class="slider-price__header">Стандарт</div>
+          <div class="slider-price__main-item">3,99 USD</div>
+          <ul class="slider-price__list">
+            <li class="slider-price__list-item">Розовый фильтр</li>
+            <li class="slider-price__list-item">Смайлики</li>
+            <li class="slider-price__list-item">Комментарии</li>
+          </ul>
+        </section>
+        <section class="slider-price__item"></section>
+        <div class="slider-price__pagination">
+          <span></span>
+          <span class="slider-price__pagination-item-active"></span>
+          <span></span>
+        </div>
       </div>
-    </article>
+    </section>
     
-    <div class="price-block">
-      <div class="flag flag-hit">ХИТ</div>
-      <div class="product-type">Стандарт</div>
-      <div class="price">3,99 USD</div>
-      <div class="product-feature">Розовый фильтр</div>
-      <div class="product-feature">Смайлики</div>
-      <div class="product-feature">Комментарии</div>
-      <div class="price-slider">
-        <span></span>
-        <span class="active"></span>
-        <span></span>
+    <footer class="promo-page-footer">
+      <p class="promo-page-footer__text">Остались вопросы? Свяжитесь с нами!</p>
+      <div class="contacts contacts--phone">
+        <p class="contacts__title">Звоните:</p>
+        <p class="contacts__text">+7 (812) 555-66-66</p>
       </div>
-    </div>
-    
-    <footer class="main-footer">
-      <p>Остались вопросы? Свяжитесь с нами!</p>
-      <div class="contacts phone">
-        <p class="contacts-title">Звоните:</p>
-        <p>+7 (812) 555-66-66</p>
+      <div class="contacts contacts--e-mail">
+        <p class="contacts__title">Пишите:</p>
+        <p class="contacts__text">mail@htmlacademy.ru</p>
       </div>
-      <div class="contacts e-mail">
-        <p class="contacts-title">Пишите:</p>
-        <p>mail@htmlacademy.ru</p>
+      <div class="contacts contacts--address">
+        <p class="contacts__title">Приезжайте в гости:</p>
+        <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
       </div>
-      <div class="contacts address">
-        <p class="contacts-title">Приезжайте в гости:</p>
-        <p>ул. Большая Конюшенная, 19/8</p>
-      </div>
-      <img src="http://placehold.it/50x50" width="50" height="50" alt="map">
     </footer>
     <!-- <script src="js/script.js"></script> -->
 

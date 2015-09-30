@@ -7,32 +7,31 @@
   </head>
   <body>
    
-    <div class="contest-header">
+    <div class="contest-page-header">
       <header class="main-header">
-        <a class="logo" href="index.html">Pink</a>
-        <a href="#">open/close menu</a>
-        <nav class="main-navigation">
-          <ul>
-            <li>
+        <a class="main-header__logo-link" href="index.html">Pink</a>
+        <nav class="main-nav">
+          <a class="main-nav__toggle  main-nav__toggle--close" href="#">open/close menu</a>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
               <a href="#">Информация</a>
             </li>
-            <li>
+            <li class="main-nav__item">
               <a href="#">Блог</a>
             </li>
-            <li>
+            <li class="main-nav__item">
               <a href="#">Отзывы</a>
             </li>
-            <li class="active">
+            <li class="main-nav__item  main-nav__item--active">
               <a href="#">Конкурс</a>
             </li>
           </ul>
-        </nav>
       </header>
-      <p>Конкурс на самое безбашеное путешествие с Пинк</p>
+      <h2 class="contest-page-header__text">Конкурс на самое безбашеное путешествие с Пинк</h2>
     </div>
 
-    <div class="contest-text">
-      <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните</p>
+    <div class="contest-page-content">
+      <p class="contest-page-content__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните</p>
     </div>
     
     <form class="contest-form" action="#" method="get" enctype="multipart/form-data">
@@ -160,17 +159,17 @@
       
     </form>
     
-    <footer class="contest-footer">
-      <a class="pink-logo" href="index.html">
+    <footer class="main-footer">
+      <a class="logo" href="index.html">
         <img src="http://placehold.it/50x50" width="50" height="50" alt="pink logo">
         <span>pink</span>
       </a>
-      <div class="footer-social">
-        <a href="#" class="social-btn social-btn-tw">twitter</a>
-        <a href="#" class="social-btn social-btn-fb">facebook</a>
-        <a href="#" class="social-btn social-btn-you">youtube</a>
+      <div class="social-links">
+        <a href="#" class="social-links__item social-links__item-tw">twitter</a>
+        <a href="#" class="social-links__item social-links__item-fb">facebook</a>
+        <a href="#" class="social-links__item social-links__item-you">youtube</a>
       </div>
-      <div class="footer-copyright">
+      <div class="main-footer__copyright">
         <p>Разработано</p>
         <a href="#"><img src="http://placehold.it/50x50" width="50" height="50" alt="HTML Academy"></a>
       </div>
