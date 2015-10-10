@@ -1,0 +1,43 @@
+.download {
+  position: relative;
+  min-height: 270px;
+  color: @light-text;
+  background-color: @dark-dark-grey;
+  background-image: url("../img/logo-apple.png"),
+    url("../img/logo-android.png"),
+    url("../img/logo-windows.png");
+  background-position: 56px 114px, 140px 122px, 217px 126px;
+  background-repeat: no-repeat;
+  
+  &__button {
+    position: absolute;
+    top: 28px;
+    left: 19px;
+    display: block;
+    width: 275px;
+    min-height: 35px;
+    padding-top: 14px;
+
+    text-decoration: none;
+    text-align: center;
+
+    color: @light-text;
+    font-size: @title-font;
+    font-weight: 700;
+    line-height: @low-line;
+
+    border: 3px solid @light-fill;
+    border-radius: 30px;
+  }
+  
+  &__text {
+    width: 240px;
+    font-size: @base-font;
+    line-height: @base-line;
+    font-weight: 300;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 192px;
+  }
+    
+}
