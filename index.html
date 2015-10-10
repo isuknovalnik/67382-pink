@@ -4,14 +4,21 @@
     <meta charset="utf-8">
     <title>HTML Academy: pink</title>
     <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   </head>
   <body>
    
     <div class="promo-page-header">
-      <header class="main-header">
-        <a class="main-header__logo-link" href="#">Pink</a>
+      <header class="main-header main-header--transparent">
+        <a class="main-header__logo-link" href="#">
+          <img src="img/pink-logo.png" height="23" width="74" alt="Pink">
+        </a>
         <nav class="main-nav">
-          <a class="main-nav__toggle  main-nav__toggle--close" href="#">open/close menu</a>
+          <a class="main-nav__toggle  main-nav__toggle--close" href="#">
+           <img src="img/btn-open-menu.png" height="24" width="50" alt="open menu">
+          </a>
           <ul class="main-nav__list">
             <li class="main-nav__item  main-nav__item--active">
               <a href="#">Информация</a>
@@ -60,7 +67,7 @@
       <div class="slider-reviews">
         <article class="slider-reviews__item">
           <h1 class="slider-reviews__header">Николай Петров</h1>
-          <p class="slider-reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          <p class="slider-reviews__text">«Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А еще я познакомился со своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!»</p>
         </article>
         <article class="slider-reviews__item"></article>
         <article class="slider-reviews__item"></article>
@@ -76,9 +83,13 @@
       <div class="slider-price">
         <section class="slider-price__item"></section>
         <section class="slider-price__item">
-          <div class="slider-price__flag slider-price__flag--hit">ХИТ</div>
-          <div class="slider-price__header">Стандарт</div>
-          <div class="slider-price__main-item">3,99 USD</div>
+          <div class="slider-price__header">
+            <div class="slider-price__header--wrap">
+              <div class="slider-price__flag slider-price__flag--hit">ХИТ</div>
+              <div class="slider-price__title">Стандарт</div>
+              <div class="slider-price__main-item">3,99 USD</div>
+            </div>
+          </div>
           <ul class="slider-price__list">
             <li class="slider-price__list-item">Розовый фильтр</li>
             <li class="slider-price__list-item">Смайлики</li>
@@ -94,22 +105,28 @@
       </div>
     </section>
     
-    <footer class="promo-page-footer">
-      <p class="promo-page-footer__text">Остались вопросы? Свяжитесь с нами!</p>
-      <div class="contacts contacts--phone">
-        <p class="contacts__title">Звоните:</p>
-        <p class="contacts__text">+7 (812) 555-66-66</p>
+    <div class="footer-map-wrap">
+      <div class="footer-wrap">
+        <footer class="promo-page-footer">
+          <p class="promo-page-footer__text">Остались вопросы? Свяжитесь с нами!</p>
+          <div class="contacts contacts--phone">
+            <p class="contacts__title">Звоните:</p>
+            <p class="contacts__text">+7 (812) 555-66-66</p>
+          </div>
+          <div class="contacts contacts--e-mail">
+            <p class="contacts__title">Пишите:</p>
+            <p class="contacts__text">mail@htmlacademy.ru</p>
+          </div>
+          <div class="contacts contacts--address">
+            <p class="contacts__title">Приезжайте в гости:</p>
+            <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
+          </div>
+        </footer>
       </div>
-      <div class="contacts contacts--e-mail">
-        <p class="contacts__title">Пишите:</p>
-        <p class="contacts__text">mail@htmlacademy.ru</p>
-      </div>
-      <div class="contacts contacts--address">
-        <p class="contacts__title">Приезжайте в гости:</p>
-        <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
-      </div>
-    </footer>
-    <!-- <script src="js/script.js"></script> -->
+      <span class="map-label"></span>
+    </div>
+    
+    <script src="js/script.js"></script>
 
   </body>
 </html>
