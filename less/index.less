@@ -36,7 +36,8 @@ body {
 }
 
 .promo-page-content {
-  min-height: 250px;
+  min-height: 240px;
+  padding-top: 10px;
   background-color: @light-fill;
   background: url("../img/bar-promo-page-content.png") bottom no-repeat;
   
@@ -45,15 +46,13 @@ body {
     color: @text-color;
     .large-text;
     padding-top: 31px;
-    
-    &:first-child {
-      padding-top: 41px;
-    }
   }
+
 }
 
 .features {
-  min-height: 752px;
+  min-height: 723px;
+  padding-top: 30px;
   background-color: @light-grey-fill;
   background-image: url("../img/img-features.png");
   background-repeat: no-repeat;
@@ -64,10 +63,10 @@ body {
     width: 280px;
     margin: 0 auto;
     text-align: center;
-  
-    &:first-child {
-      padding-top: 30px;
-    }
+    
+//    &:first-child {
+//     padding-top: 30px;
+//    }
   }
 
   &__title {
@@ -173,8 +172,8 @@ body {
       width: 276px;
       min-height: 98px;
       margin: 0 auto;
-      border-left: 2px solid @border-price;
-      border-right: 2px solid @border-price;
+      border-left: 2px solid @border-light-grey;
+      border-right: 2px solid @border-light-grey;
     }
   }
   
@@ -227,7 +226,7 @@ body {
       margin: 0 auto;
       padding-top: 14px;
       padding-left: 22px;
-      border: 2px solid @border-price;
+      border: 2px solid @border-light-grey;
       border-top: none;
       background: url("../img/icon-yes.png") no-repeat 230px 15px;
       
