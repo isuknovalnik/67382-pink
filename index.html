@@ -6,18 +6,18 @@
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
   </head>
   <body>
    
     <div class="promo-page-header">
       <header class="main-header main-header--transparent">
         <a class="main-header__logo-link" href="#">
-          <img src="img/pink-logo.png" height="23" width="74" alt="Pink">
+          <img src="img/logotype-white-mobile.svg" height="23" width="74" alt="Pink">
         </a>
         <nav class="main-nav">
           <a class="main-nav__toggle  main-nav__toggle--close" href="#">
-           <img src="img/btn-open-menu.png" height="24" width="50" alt="open menu">
+           <img src="img/menu-burger.svg" height="24" width="50" alt="open menu">
           </a>
           <ul class="main-nav__list">
             <li class="main-nav__item  main-nav__item--active">
@@ -39,7 +39,9 @@
     </div>
     
     <section class="download">
-      <a href="#" class="download__button">Скачать приложение</a>
+      <div class="download__button-wrap">
+        <a href="#" class="download__button">Скачать приложение</a>
+      </div>
       <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
     </section>
 
@@ -115,7 +117,9 @@
           </div>
           <div class="contacts contacts--e-mail">
             <p class="contacts__title">Пишите:</p>
-            <p class="contacts__text">mail@htmlacademy.ru</p>
+            <a href="mailto:mail@htmlacademy.ru">
+              <p class="contacts__text">mail@htmlacademy.ru</p>
+            </a>
           </div>
           <div class="contacts contacts--address">
             <p class="contacts__title">Приезжайте в гости:</p>

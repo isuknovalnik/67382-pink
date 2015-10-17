@@ -20,10 +20,10 @@ body {
 
 .promo-page-header {
   min-height: 457px;
-  background-image: url("../img/img-promo-page.png"),
-    url("../img/bg-page-header.jpg");
+  background-image: url("../img/iphone-hand-mobile.png"),
+    url("../img/background-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: bottom left;
+  background-position: bottom left, bottom center;
   
   &__text {
     width: 230px;
@@ -36,10 +36,10 @@ body {
 }
 
 .promo-page-content {
-  min-height: 240px;
+  min-height: 207px;
   padding-top: 10px;
   background-color: @light-fill;
-  background: url("../img/bar-promo-page-content.png") bottom no-repeat;
+
   
   &__text {
     width: 230px;
@@ -52,11 +52,12 @@ body {
 
 .features {
   min-height: 723px;
-  padding-top: 30px;
+  padding-top: 63px;
   background-color: @light-grey-fill;
-  background-image: url("../img/img-features.png");
+  background-image: url("../img/triangle-white.svg"),
+    url("../img/screen-mobile-3.png");
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: top left, bottom center;
   
   &__item {
     min-height: 140px;
@@ -64,9 +65,6 @@ body {
     margin: 0 auto;
     text-align: center;
     
-//    &:first-child {
-//     padding-top: 30px;
-//    }
   }
 
   &__title {
@@ -89,8 +87,7 @@ body {
 }
 
 .slider-reviews {
-  min-height: 444px;
-  background: url("../img/bar-reviews.png") bottom no-repeat;
+  min-height: 353px;
   
   &__item {
     display: none;
@@ -124,7 +121,7 @@ body {
   }
   
   &__pagination {
-    min-height: 82px;
+    min-height: 49px;
     margin: 0 auto;
     text-align: center;
     padding-top: 18px;
@@ -152,10 +149,16 @@ body {
 
 .slider-price {
   min-height: 380px;
+  padding-top: 91px;
+  background-color: @light-grey-fill;
+    background-image: url("../img/triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
   
   &__item {
     display: none;
     min-height: 280px;
+    background-color: @light-fill;
     
     &:nth-child(2) {
       display: block;
@@ -228,10 +231,10 @@ body {
       padding-left: 22px;
       border: 2px solid @border-light-grey;
       border-top: none;
-      background: url("../img/icon-yes.png") no-repeat 230px 15px;
+      background: url("../img/yes.svg") no-repeat 230px 15px;
       
       &:last-child {
-        background: url("../img/icon-no.png") no-repeat 230px 15px;
+        background: url("../img/no.svg") no-repeat 230px 15px;
       }
       
     }
@@ -271,9 +274,9 @@ body {
   position: relative;
   min-height: 610px;
   background-color: @map-fill;
-  background-image: url("../img/bar-footer.png"),
+  background-image: url("../img/triangle-white-footer.svg"),
     url("../img/map.jpg");
-  background-position: 0 410px, bottom center;
+  background-position: 0 409px, bottom center;
   background-repeat: no-repeat;
 }
 
@@ -312,6 +315,10 @@ body {
     .large-text;
     color: @pink-color;
     padding-top: 8px;
+  }
+  
+  & a {
+    text-decoration: none;
   }
 }
 

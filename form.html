@@ -5,17 +5,18 @@
     <title>HTML Academy: pink</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>  </head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  </head>
   <body>
    
     <div class="contest-page-header">
       <header class="main-header main-header--transparent">
         <a class="main-header__logo-link" href="#">
-          <img src="img/pink-logo.png" height="23" width="74" alt="Pink">
+          <img src="img/logotype-white-mobile.svg" height="23" width="74" alt="Pink">
         </a>
         <nav class="main-nav">
           <a class="main-nav__toggle  main-nav__toggle--close" href="#">
-           <img src="img/btn-open-menu.png" height="24" width="50" alt="open menu">
+           <img src="img/menu-burger.svg" height="24" width="50" alt="open menu">
           </a>
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -51,7 +52,7 @@
       </fieldset>
 
       <fieldset class="contest-form__item  contest-form__item--even  contest-form__item--radio-inputs">
-        <div class="contest-form__title contest-form__title--radio">С каким приложением путешествовали? *</div>
+        <h3 class="contest-form__title contest-form__title--radio">С каким приложением путешествовали? *</h3>
         <input class="contest-form__radio-input" type="radio" name="app-type" value="iOS" checked required id="ios">
         <label class="contest-form__label-radio" for="ios"> Pink для iOS</label>
         <input class="contest-form__radio-input" type="radio" name="app-type" value="Android" required id="android">
@@ -61,7 +62,7 @@
       </fieldset>
      
       <fieldset class="contest-form__item  contest-form__item--odd  contest-form__item--period">
-        <div class="contest-form__title">Когда вы путешествовали? *</div>
+        <h3 class="contest-form__title">Когда вы путешествовали? *</h3>
         <input class="contest-form__text-input" type="text" name="travel-start" value="1 апреля 2015" id="travel-start" required>
         <label class="contest-form__label contest-form__label--period" for="travel-start">дата выезда</label>
         <div class="contest-form__counter-wrap">
@@ -76,7 +77,7 @@
       
 
       <fieldset class="contest-form__item contest-form__item--even contest-form__item--additional-items">
-        <div class="contest-form__title contest-form__title--additional-items">Количество попутчиков *</div>
+        <h3 class="contest-form__title contest-form__title--additional-items">Количество попутчиков *</h3>
         <div class="contest-form__counter-wrap">
           <span class="contest-form__decr-btn  contest-form__decr-btn--remove-block"></span>
           <input class="contest-form__text-input contest-form__text-input--number" type="text" name="companions" value="2 чел" id="companions" required>
@@ -110,7 +111,7 @@
       
       
       <fieldset class="contest-form__item  contest-form__item--odd  contest-form__item--checkboxes">
-        <div class="contest-form__title  contest-form__title--checkboxes">Ваши безбашенные достижения в&nbsp;путешествии</div>
+        <h3 class="contest-form__title  contest-form__title--checkboxes">Ваши безбашенные достижения в&nbsp;путешествии</h3>
         <input class="contest-form__checkbox-input" type="checkbox" name="shark-self" value="shark-self" checked id="shark-self">
         <label class="contest-form__label-checkbox" for="shark-self"> Сделал селфи с акулой</label>
         <input class="contest-form__checkbox-input" type="checkbox" name="beach-burned" value="beach-burned" checked id="beach-burned">
@@ -126,9 +127,9 @@
       </fieldset>
       
       <fieldset class="contest-form__item  contest-form__item--even  contest-form__item--files">
-        <div class="contest-form__title  contest-form__title--files">ВАШИ ФОТОГРАФИИ из поездки *</div>
+        <h3 class="contest-form__title  contest-form__title--files">ВАШИ ФОТОГРАФИИ из поездки *</h3>
         <label class="contest-form__add-file-label" for="add-photo">ЗАГРУЗИТЬ ФОТО</label>
-        <input class="contest-form__add-file" type=file name=add-photo id="add-photo">
+        <input class="contest-form__add-file" type=file name=add-photo id="add-photo" multiple>
         <div class="contest-form__delimiter-files"></div>
         
         <div class="contest-form__image-previews-wrap">
