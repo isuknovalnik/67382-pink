@@ -2,14 +2,34 @@
   min-height: 271px;
   color: @light-text;
   background-color: @dark-dark-grey;
-  background-image: url("../img/apple-logo.svg"),
+  
+  @media (min-width: @mobile) {
+    width: 360px;
+    background: none;
+  }
+  
+  
+  &__logo-wrap {
+    width: 320px;
+    min-height: 70px;
+    margin: 0 auto;
+    margin-top: 28px;
+    background-image: url("../img/apple-logo.svg"),
     url("../img/android-logo.svg"),
     url("../img/microsoft-logo.svg");
-  background-position: 56px 114px, 140px 122px, 217px 126px;
-  background-repeat: no-repeat;
+    background-position: 58px 4px, 140px 12px, 219px 16px;
+    background-repeat: no-repeat;
+    
+    @media (min-width: @mobile) {
+      margin: 0;
+      margin-top: 42px;
+      margin-left: 30px;
+    }
+  }
   
   &__button-wrap {
     padding-top: 28px;
+    
   }
   
   &__button {
@@ -38,7 +58,15 @@
     font-weight: 300;
     margin: 0 auto;
     text-align: center;
-    padding-top: 110px;
+    padding-top: 12px;
+    
+    @media (min-width: @mobile) {
+      width: 300px;
+      padding-top: 26px;
+      font-size: @title-font;
+      margin: 0;
+      margin-left: 40px;
+    }
   }
     
 }
