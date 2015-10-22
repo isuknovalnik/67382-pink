@@ -10,15 +10,11 @@
   <body>
    
     <div class="contest-page-header">
-     <div class="main-header-wrap  main-header-wrap--transparent">
-      <header class="main-header main-header--transparent">
-        <a class="main-header__logo-link" href="#">
-          <img src="img/logotype-white-mobile.svg" height="23" width="74" alt="Pink">
-        </a>
-        <nav class="main-nav">
-          <a class="main-nav__toggle  main-nav__toggle--close" href="#">
-           <img src="img/menu-burger.svg" height="24" width="50" alt="open menu">
-          </a>
+      <div class="main-header-wrap  main-header-wrap--transparent">
+          <header class="main-header  main-header--transparent">
+            <a class="main-header__logo-link" href="#"></a>
+            <nav class="main-nav">
+              <a class="main-nav__toggle  main-nav__toggle--close" href="#"></a>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a href="#">Информация</a>
@@ -39,13 +35,13 @@
     </div>
 
     <div class="contest-page-content">
-      <p class="contest-page-content__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните:</p>
+      <p class="contest-page-content__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
     </div>
     
     <div class="contest-form-wrap">
       <form class="contest-form" action="#" method="get" enctype="multipart/form-data">
 
-        <fieldset class="contest-form__item  contest-form__item--odd  contest-form__item--main">
+        <fieldset class="contest-form__item  contest-form__item--main">
           <label class="contest-form__label contest-form__label--main" for="name">Имя: *</label>
           <input class="contest-form__text-input" type="text" name="name" placeholder="Введите ваше имя" required id="name">
           <label class="contest-form__label contest-form__label--main" for="surname">Фамилия: *</label>
@@ -54,7 +50,8 @@
           <input class="contest-form__text-input" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic">
         </fieldset>
 
-        <fieldset class="contest-form__item  contest-form__item--even  contest-form__item--radio-inputs">
+        <fieldset class="contest-form__item  contest-form__item--radio-inputs">
+          <legend class="contest-form__wide-title">С каким приложением путешествовали? *</legend>
           <h3 class="contest-form__title contest-form__title--radio">С каким приложением путешествовали? *</h3>
           <input class="contest-form__radio-input" type="radio" name="app-type" value="iOS" checked required id="ios">
           <label class="contest-form__label-radio" for="ios"> Pink для iOS</label>
@@ -64,24 +61,34 @@
           <label class="contest-form__label-radio" for="windows">  Windows Phone</label>
         </fieldset>
 
-        <fieldset class="contest-form__item  contest-form__item--odd  contest-form__item--period">
-          <h3 class="contest-form__title">Когда вы путешествовали? *</h3>
-          <input class="contest-form__text-input" type="text" name="travel-start" value="1 апреля 2015" id="travel-start" required>
-          <label class="contest-form__label contest-form__label--period" for="travel-start">дата выезда</label>
-          <div class="contest-form__counter-wrap">
-            <span class="contest-form__decr-btn" class="decrease-days"></span>
-            <input class="contest-form__text-input contest-form__text-input--number" type="text" name="travel-days" value="10 дней" id="travel-days" required>
-            <span class="contest-form__incr-btn" class="increase-days"></span>
+        <fieldset class="contest-form__item  contest-form__item--period">
+         <legend class="contest-form__wide-title">Когда вы путешествовали? *</legend>
+         <h3 class="contest-form__title">Когда вы путешествовали? *</h3>
+          <div class="period">
+            <div class="period__start-wrap">
+              <input class="period__text-input  period__text-input--start" type="text" name="travel-start" value="1 апреля 2015" id="travel-start" required>
+              <label class="period__label  period__label--start" for="travel-start">дата выезда</label>
+            </div>
+            <div class="period__length-wrap">
+              <div class="period__counter">
+                <span class="period__decr-btn  decrease-days"></span>
+                <input class="period__text-input  period__text-input--number" type="text" name="travel-days" value="10 дней" id="travel-days" required>
+                <span class="period__incr-btn  increase-days"></span>
+              </div>
+              <label class="period__label  period__label--length" for="travel-days">Продолжительность</label>
+            </div>
+            <div class="period__end-wrap">
+              <input class="period__text-input  period__text-input--end" type="text" name="travel-end" value="1 апреля 2015" id="travel-end" disabled>
+              <label class="period__label  period__label--end" for="travel-end">Дата Возвращения</label>
+            </div>
           </div>
-          <label class="contest-form__label contest-form__label--period" for="travel-days">Продолжительность</label>
-          <input class="contest-form__text-input" type="text" name="travel-end" value="1 апреля 2015" id="travel-end" disabled>
-          <label class="contest-form__label contest-form__label--period" for="travel-end">Дата Возвращения</label>
         </fieldset>
 
 
-        <fieldset class="contest-form__item contest-form__item--even contest-form__item--additional-items">
+        <fieldset class="contest-form__item  contest-form__item--additional-items">
+          <legend class="contest-form__wide-title">Количество попутчиков *</legend>
           <h3 class="contest-form__title contest-form__title--additional-items">Количество попутчиков *</h3>
-          <div class="contest-form__counter-wrap">
+          <div class="contest-form__add-items-counter">
             <span class="contest-form__decr-btn  contest-form__decr-btn--remove-block"></span>
             <input class="contest-form__text-input contest-form__text-input--number" type="text" name="companions" value="2 чел" id="companions" required>
             <span class="contest-form__incr-btn  contest-form__incr-btn--add-block"></span>
@@ -95,6 +102,7 @@
             <div class="contest-form__add-item-wrap">
               <span class="contest-form__additional-item-number">1</span>
               <input class="contest-form__text-input  contest-form__text-input--additional" type="text" name="companion1-name" placeholder="Введите ваше имя" required id="companion1-name">
+              <a href="#" class="contest-form__del-item-btn">удалить</a>
             </div>
             <label class="contest-form__label  contest-form__label--add-second" for="companion1-nickname">ПРОЗВИЩЕ:</label>
             <input class="contest-form__text-input  contest-form__text-input--add-second" type="text" name="companion1-nickname" placeholder="Ну как же без этого!" id="companion1-nickname">
@@ -106,6 +114,7 @@
             <div class="contest-form__add-item-wrap">
               <span class="contest-form__additional-item-number">2</span>
               <input class="contest-form__text-input  contest-form__text-input--additional" type="text" name="companion2-name" placeholder="Введите ваше имя" required id="companion2-name">
+              <a href="#" class="contest-form__del-item-btn">удалить</a>
             </div>
             <label class="contest-form__label  contest-form__label--add-second" for="companion2-nickname">ПРОЗВИЩЕ:</label>
             <input class="contest-form__text-input  contest-form__text-input--add-second" type="text" name="companion2-nickname" placeholder="Ну как же без этого!" id="companion2-nickname">
@@ -113,7 +122,8 @@
         </fieldset>
 
 
-        <fieldset class="contest-form__item  contest-form__item--odd  contest-form__item--checkboxes">
+        <fieldset class="contest-form__item  contest-form__item--checkboxes">
+          <legend class="contest-form__wide-title">Ваши безбашенные достижения в&nbsp;путешествии</legend>
           <h3 class="contest-form__title  contest-form__title--checkboxes">Ваши безбашенные достижения в&nbsp;путешествии</h3>
           <input class="contest-form__checkbox-input" type="checkbox" name="shark-self" value="shark-self" checked id="shark-self">
           <label class="contest-form__label-checkbox" for="shark-self"> Сделал селфи с акулой</label>
@@ -129,7 +139,8 @@
           <label class="contest-form__label-checkbox" for="crushed-hotel"> Разгромил отель</label>
         </fieldset>
 
-        <fieldset class="contest-form__item  contest-form__item--even  contest-form__item--files">
+        <fieldset class="contest-form__item  contest-form__item--files">
+          <legend class="contest-form__wide-title">ВАШИ ФОТОГРАФИИ из поездки *</legend>
           <h3 class="contest-form__title  contest-form__title--files">ВАШИ ФОТОГРАФИИ из поездки *</h3>
           <label class="contest-form__add-file-label" for="add-photo">ЗАГРУЗИТЬ ФОТО</label>
           <input class="contest-form__add-file" type=file name=add-photo id="add-photo" multiple>
@@ -186,9 +197,11 @@
           </div>
         </fieldset>
 
-        <input class="contest-form__submit-button" name="contest-submit" type="submit" value="Отправить форму">
-        <div class="contest-form__hint-text"><span class="contest-form__hint-text  contest-form__hint-text--hint-symbol">*</span> — обязательные поля</div>
-
+        <div class="contest-form__submit-wrap">
+          <input class="contest-form__submit-button" name="contest-submit" type="submit" value="Отправить форму">
+          <div class="contest-form__hint-text"><span class="contest-form__hint-text  contest-form__hint-text--hint-symbol">*</span> — обязательные поля</div>
+        </div>
+        
       </form>
     </div>
     
@@ -205,7 +218,7 @@
         </a>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+<!--    <script src="js/script.js"></script> -->
 
   </body>
 </html>
