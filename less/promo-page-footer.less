@@ -1,0 +1,137 @@
+.footer-map-wrap {
+  position: relative;
+  min-height: 610px;
+  background-color: @map-fill;
+  background-image: url("../img/triangle-white-footer.svg"),
+    url("../img/map.jpg");
+  background-position: 0 409px, bottom center;
+  background-repeat: no-repeat;
+  
+  @media (min-width: @mobile) {
+    background-position: 0 399px, bottom center;
+  }
+  
+  @media (min-width: @map-tablet-min) {
+    background-image: url("../img/triangle-white-footer.svg"),
+      url("../img/map-tablet.jpg");
+      min-height: 780px;
+  }
+}
+
+.footer-wrap {
+  min-height: 410px;
+  background-color: @light-fill;
+  
+  @media (min-width: @mobile) {
+    min-height: 400px;
+  }
+}
+
+.promo-page-footer {
+  min-height: 410px;
+  width: 250px;
+  margin: 0 auto;
+  
+  @media (min-width: @mobile) {
+    width: 94.286%;
+    min-height: 400px;
+  }
+  
+  &__text {
+    .large-text;
+    color: @text-color;
+    padding-top: 42px;
+    padding-bottom: 14px;
+    
+    @media (min-width: @mobile) {
+      width: 400px;
+      padding-top: 44px;
+    }
+    
+    @media (min-width: @mobile) and (max-width: @narrow-tablet) {
+      font-size: @large-font;
+      line-height: @high-line;
+      padding-top: 42px;
+      padding-bottom: 0;
+      width: 250px;
+    }
+  }
+}
+
+.contacts {
+  min-height: 24px;
+  padding-top: 24px;
+  
+  @media (min-width: @mobile) {
+    width: 250px;
+    padding-top: 34px;
+    min-height: 69px;
+
+    &-wrap {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: @mobile) and (max-width: @narrow-tablet) {
+    min-height: 24px;
+  }
+
+  
+  &__title {
+    font-weight: bold;
+    font-size: @title-font;
+    color: @text-color;
+    margin: 0 auto;
+    text-align: center;
+    line-height: @low-line;
+  }
+  
+  &__text {
+    margin: 0 auto;
+    text-align: center;
+    font-size: @large-font;
+    line-height: @high-line;
+    font-weight: 300;
+
+    color: @pink-color;
+    padding-top: 8px;
+    
+    @media (min-width: @mobile) {
+      padding-top: 10px;
+    }
+  }
+  
+  & a {
+    text-decoration: none;
+  }
+}
+
+.map-label {
+  position: absolute;
+  bottom: 70px;
+  left: 44.6875%;
+  display: block;
+  width:16px;
+  height:16px;
+  background-color: @pink-color;
+  border: 9px solid @light-fill;
+  border-radius:50%;
+  
+  @media (min-width: @map-tablet-min) {
+    bottom: 144px;
+    left: 47.571%;
+  }
+  
+  @media (min-width: @mobile) {
+    left: 46.73%;
+  }
+  
+  @media (min-width: @narrow-tablet) {
+    left: 47.344%;
+  }
+}

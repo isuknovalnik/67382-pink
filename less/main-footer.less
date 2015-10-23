@@ -1,5 +1,19 @@
 .main-footer {
   min-height: 280px;
+  
+  @media (min-width: @mobile) {
+      display: flex;
+      align-items: center;
+      min-height: 126px;
+  }
+  
+  &--promo-page {
+    display: none;
+    
+    @media (min-width: @mobile) {
+      display: flex;
+    }
+  }
 }
 
 .logo-link {
@@ -7,7 +21,14 @@
   min-height: 90px;
   width: 280px;
   margin: 0 auto;
-  background: url("../img/pink-logo-footer.png") center center no-repeat;
+  background: url("../img/logotype-blue-tablet.svg") center center no-repeat;
+  
+  @media (min-width: @mobile) {
+    width: 36.428%;
+    min-height: 126px;
+    background-position: 41px 35px;
+    background-size: 57.647%;
+  }
 }
 
 .social-links {
@@ -16,6 +37,14 @@
   padding-top: 18px;
   width: 190px;
   margin: 0 auto;
+  
+  @media (min-width: @mobile) {
+//    width: 33.333%;
+    min-height: 85px;
+    padding-top: 41px;
+    display: flex;
+    justify-content: space-around;
+  }
   
   &__item {
     display: inline-block;
@@ -27,17 +56,22 @@
     border: 2px solid @border-social;
     border-radius:50%;
     
+    @media (min-width: @mobile) {
+      margin: 0;
+    }
+    
     &--tw {
-      background: url("../img/icon-twitter.png") center center no-repeat;
+      background: url("../img/twitter.svg") center center no-repeat;
     }
     
     &--fb {
-      background: url("../img/icon-facebook.png") center center no-repeat;
+      background: url("../img/facebook.svg") center center no-repeat;
     }
     
     &--you {
-      background: url("../img/icon-youtube.png") center center no-repeat;
+      background: url("../img/youtube.svg") center center no-repeat;
     }
+
   }
 }
 
@@ -47,13 +81,28 @@
   width: 280px;
   margin: 0 auto;
 
-  background: url("../img/icon-ha.png") 177px 14px no-repeat;
-  
+  @media (min-width: @mobile) {
+    width: 36.428%;
+    min-height: 126px;
+  }
+
   &__link {
     display: block;
     width: 140px;
     height: 50px;
     margin-left: 75px;
+    
+    background: url("../img/htmlacademy.svg") 102px 15px no-repeat;
+    
+    @media (min-width: @mobile) {
+      margin-left: 33.725%;
+      margin-top: 35px;
+      background-position: 103px 15px;
+    }
+    
+    @media (min-width: @mobile) and (max-width: @narrow-tablet) {
+      margin-left: 17%;
+    }
   }
   
   &__title {
