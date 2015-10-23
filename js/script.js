@@ -9,10 +9,12 @@ link.addEventListener("click", function(event) {
   header.classList.toggle("main-header--transparent");
   headerWrap.classList.toggle("main-header-wrap--transparent");
   if (menu.classList.contains("main-nav__list--show")) {
-    link.innerHTML = '<img src="img/menu-cross.svg" height="22" width="23" alt="close menu">';
+    link.classList.remove("main-nav__toggle--open");
+    link.classList.add("main-nav__toggle--close");
   }
   else {
-    link.innerHTML = '<img src="img/menu-burger.svg" height="24" width="50" alt="open menu">';
+    link.classList.remove("main-nav__toggle--close");
+    link.classList.add("main-nav__toggle--open");
   }
 
 });
@@ -23,7 +25,8 @@ window.addEventListener("keydown", function(event) {
       menu.classList.remove("main-nav__list--show");
       header.classList.add("main-header--transparent");
       headerWrap.classList.toggle("main-header-wrap--transparent");
-      link.innerHTML = '<img src="img/menu-burger.svg" height="24" width="50" alt="open menu">';
+      link.classList.remove("main-nav__toggle--close");
+      link.classList.add("main-nav__toggle--open");
     }
   }
 });
