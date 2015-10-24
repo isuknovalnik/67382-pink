@@ -1,10 +1,11 @@
 .main-header {
   position: relative;
   min-height: 64px;
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
   border-bottom: 1px solid @dark-fill;
-  background: none;
+  background-color: @dark-grey;
+  opacity: 1;
   
   @media (min-width: @mobile) {
     min-height: 110px;
@@ -12,16 +13,22 @@
   }
   
   &--transparent {
-    border-bottom: none;
+    background-color: @dark-fill;
+    opacity: .3;
   }
   
   &-wrap {
-    background-color: @dark-grey;
-    opacity: 1;
+    margin: 0 auto;
+    width: 320px;
+    background: none;
+    
+    @media (min-width: @mobile) {
+      min-height: 110px;
+      width: 100%;
+    }
     
     &--transparent {
-      background-color: @dark-fill;
-      opacity: .3;
+      border-bottom: none;
     }
   }
   
@@ -31,6 +38,7 @@
     height: 23px;
     margin-left: 20px;
     margin-top: 20px;
+    font-size: 0;
     background-image: url("../img/logotype-white-mobile.svg");
     background-repeat: no-repeat;
     
@@ -54,7 +62,7 @@
     height: 25px;
     margin-right: 20px;
     margin-top: 20px;
-    color: @light-text;
+    font-size: 0;
     background-repeat: no-repeat;
     background-position: right;
     
@@ -90,24 +98,17 @@
   }
   
   ul {
+    width: 100%;
     margin:0;
     padding:0;
     list-style:none;
-
-    @media (min-width: @mobile) {
-      width: 100%;
-    }
   }
   
   &__item {
-    width: 320px;
+    width: 100%;
     font-size: @title-font;
     font-weight: bold;
     line-height: @menu-line;
-    
-    @media (min-width: @mobile) {
-      width: 100%;
-    }
     
     a {
       display: block;

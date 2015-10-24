@@ -3,12 +3,10 @@ var header = document.querySelector(".main-header");
 var headerWrap = document.querySelector(".main-header-wrap");
 var menu = document.querySelector(".main-nav__list");
 var daysNumber = document.querySelector("#travel-days");
-var daysCounter = parseInt(daysNumber.value, 10);
 var daysDecr = document.querySelector(".decrease-days");
 var daysIncr = document.querySelector(".increase-days");
 
 var peopleNumber = document.querySelector("#companions");
-var peopleCounter = parseInt(peopleNumber.value, 10);
 var peopleDecr = document.querySelector(".decrease-people");
 var peopleIncr = document.querySelector(".increase-people");
 
@@ -43,6 +41,8 @@ window.addEventListener("keydown", function(event) {
 });
 
 // Количество дней
+var daysCounter = parseInt(daysNumber.value, 10);
+
 
 daysIncr.addEventListener("click", function(event) {
   event.preventDefault();
@@ -99,6 +99,7 @@ function daysTail (counter) {
 }
 
 // Количество попутчиков
+var peopleCounter = parseInt(peopleNumber.value, 10);
 
 peopleIncr.addEventListener("click", function(event) {
   event.preventDefault();

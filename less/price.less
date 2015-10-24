@@ -1,4 +1,5 @@
 .price {
+  position: relative;
   min-height: 380px;
   padding-top: 91px;
   background-color: @light-grey-fill;
@@ -12,17 +13,40 @@
   }
   
   &__table {
+    position: relative;
     margin: 0 auto;
     border-collapse: collapse;
+    z-index: 10;
     
     @media (min-width: @mobile) {
       width: 88.571%;
     }
     
     @media (min-width: @mobile) and (max-width: @narrow-tablet) {
-      width: 103%;
+      width: 100%;
     }
-
+    
+  }
+  
+  &__mob-table-back {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 91;
+    left: 0;
+    width: 100%;
+    padding-top: 98px;
+    background-color: @dark-grey;
+ 
+    @media (min-width: @mobile) {
+     display: none;
+    }
+  }
+  
+  &__back-cell {
+    height: 59px;
+    background-color: @light-fill;
+    border-bottom: 2px solid @border-light-grey;
   }
   
   &__header {
@@ -40,36 +64,6 @@
       border: 2px solid @dark-grey;
     }
     
-    &::before {
-      position: absolute;
-      display: block;
-      content: "";
-      top: 0;
-      left: -122px;
-      width: 120px;
-      height: 98px;
-      background-color: @dark-grey;
-      
-      @media (min-width: @mobile) {
-        display: none;
-      }
-    }
-    
-    &::after {
-      position: absolute;
-      display: block;
-      content: "";
-      top: 0;
-      left: 278px;
-      width: 122px;
-      height: 98px;
-      background-color: @dark-grey;
-      
-      @media (min-width: @mobile) {
-        display: none;
-      }
-    }
-
   }
   
   &__item-1 {
@@ -256,38 +250,6 @@
       }
     }
     
-    &::before {
-      position: absolute;
-      display: block;
-      content: "";
-      top: 0;
-      left: -122px;
-      width: 120px;
-      height: 59px;
-      background-color: @light-fill;
-      border-bottom: 2px solid @border-light-grey;
-      
-      @media (min-width: @mobile) {
-        display: none;
-      }
-    }
-    
-    &::after {
-      position: absolute;
-      display: block;
-      content: "";
-      top: 0;
-      left: 278px;
-      width: 122px;
-      height: 59px;
-      background-color: @light-fill;
-      border-bottom: 2px solid @border-light-grey;
-      
-      @media (min-width: @mobile) {
-        display: none;
-      }
-    }
-
   }
   
   &__pagination {

@@ -10,27 +10,28 @@
   <body>
    
     <div class="contest-page-header">
-      <div class="main-header-wrap  main-header-wrap--transparent">
-          <header class="main-header  main-header--transparent">
-            <a class="main-header__logo-link" href="#"></a>
-            <nav class="main-nav">
-              <a class="main-nav__toggle  main-nav__toggle--open" href="#"></a>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="#">Информация</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">Блог</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">Отзывы</a>
-            </li>
-            <li class="main-nav__item  main-nav__item--active">
-              <a href="#">Конкурс</a>
-            </li>
-          </ul>
-        </header>
-      </div>
+      <header class="main-header  main-header--transparent">
+        <div class="main-header-wrap  main-header-wrap--transparent">
+          <a class="main-header__logo-link" href="#">pink</a>
+          <a class="main-nav__toggle  main-nav__toggle--open" href="#">menu</a>
+        </div>
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="#">Информация</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#">Блог</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#">Отзывы</a>
+              </li>
+              <li class="main-nav__item  main-nav__item--active">
+                <a href="#">Конкурс</a>
+              </li>
+            </ul>
+          </nav>
+      </header>
       <h2 class="contest-page-header__text">Конкурс на самое безбашенное путешествие с Пинк</h2>
     </div>
 
@@ -71,9 +72,9 @@
             </div>
             <div class="period__length-wrap">
               <div class="period__counter">
-                <span class="period__decr-btn  decrease-days"></span>
+                <span class="period__decr-btn  decrease-days">-</span>
                 <input class="period__text-input  period__text-input--number" type="text" name="travel-days" value="10 дней" id="travel-days" required>
-                <span class="period__incr-btn  increase-days"></span>
+                <span class="period__incr-btn  increase-days">+</span>
               </div>
               <label class="period__label  period__label--length" for="travel-days">Продолжительность</label>
             </div>
@@ -89,9 +90,9 @@
           <legend class="contest-form__wide-title">Количество попутчиков *</legend>
           <h3 class="contest-form__title contest-form__title--additional-items">Количество попутчиков *</h3>
           <div class="contest-form__add-items-counter">
-            <span class="contest-form__decr-btn  contest-form__decr-btn--remove-block  decrease-people"></span>
+            <span class="contest-form__decr-btn  contest-form__decr-btn--remove-block  decrease-people">-</span>
             <input class="contest-form__text-input contest-form__text-input--number" type="text" name="companions" value="2 чел" id="companions" required>
-            <span class="contest-form__incr-btn  contest-form__incr-btn--add-block  increase-people"></span>
+            <span class="contest-form__incr-btn  contest-form__incr-btn--add-block  increase-people">+</span>
           </div>
 
           <div class="contest-form__delimiter"></div>
