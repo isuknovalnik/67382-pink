@@ -7,6 +7,10 @@
       min-height: 126px;
   }
   
+  @media (min-width: @tablet) {
+    min-height: 196px;
+  }
+  
   &--promo-page {
     display: none;
     
@@ -29,6 +33,13 @@
     background-position: 41px 35px;
     background-size: 57.647%;
   }
+  
+  @media (min-width: @tablet) {
+    min-height: 196px;
+    background: url("../img/logotype-blue-desktop.svg") center center no-repeat;
+    background-position: 107px 71px;
+    background-size: auto;
+  }
 }
 
 .social-links {
@@ -39,7 +50,6 @@
   margin: 0 auto;
   
   @media (min-width: @mobile) {
-//    width: 33.333%;
     min-height: 85px;
     padding-top: 41px;
     display: flex;
@@ -86,6 +96,10 @@
     min-height: 126px;
   }
 
+  @media (min-width: @tablet) {
+    min-height: 196px;
+  }
+  
   &__link {
     display: block;
     width: 140px;
@@ -103,6 +117,18 @@
     @media (min-width: @mobile) and (max-width: @narrow-tablet) {
       margin-left: 17%;
     }
+    
+    @media (min-width: @tablet) {
+      width: 170px;
+      height: 60px;
+      margin-left: 40.49%;
+      margin-top: 70px;
+      background-position: 127px 16px;
+    }
+    
+    @media (min-width: @tablet) and (max-width: @narrow-desktop) {
+      margin-left: 20%;
+    }
   }
   
   &__title {
@@ -116,5 +142,10 @@
     line-height: @low-line;
     text-decoration: none;
 
+    @media (min-width: @tablet) {
+      width: 120px;
+      height: 30px;
+      font-size: @title-font;
+    }
   }
 }

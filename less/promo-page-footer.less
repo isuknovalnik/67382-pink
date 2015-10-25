@@ -16,6 +16,16 @@
       url("../img/map-tablet.jpg");
       min-height: 780px;
   }
+  
+  @media (min-width: @tablet) {
+    min-height: 870px;
+    background-image: url("../img/triangle-white-footer.svg"),
+      url("../img/map-desktop.jpg");
+  }
+  
+  @media (min-width: @fix-contacts) {
+    background-position: 0 344px, bottom center;
+  }
 }
 
 .footer-wrap {
@@ -24,6 +34,10 @@
   
   @media (min-width: @mobile) {
     min-height: 400px;
+  }
+  
+  @media (min-width: @fix-contacts) {
+    min-height: 345px;
   }
 }
 
@@ -35,6 +49,10 @@
   @media (min-width: @mobile) {
     width: 94.286%;
     min-height: 400px;
+  }
+  
+  @media (min-width: @fix-contacts) {
+    min-height: 345px;
   }
   
   &__text {
@@ -54,6 +72,18 @@
       padding-top: 42px;
       padding-bottom: 0;
       width: 250px;
+    }
+    
+    @media (min-width: @tablet) {
+      font-size: @w-large-font;
+      line-height: @w-large-line;
+      width: 500px;
+    }
+    
+    @media (min-width: @narrow-desktop) {
+      font-size: @w-page-title-font;
+      line-height: @w-page-title-line;
+      padding-top: 64px;
     }
   }
 }
@@ -75,12 +105,39 @@
       justify-content: space-around;
       align-items: center;
     }
+    
+    @media (min-width: @tablet) {
+      padding-top: 46px;
+      
+      &-wrap {
+        align-items: baseline;
+      }
+      
+      @media (min-width: @narrow-desktop) {
+        &-wrap {
+          width: 85%;
+        }
+      }
+    }
   }
 
   @media (min-width: @mobile) and (max-width: @narrow-tablet) {
     min-height: 24px;
   }
 
+  &--address {
+    @media (min-width: @tablet) {
+      order: 1;
+    }
+    
+  }
+  
+  &--e-mail {
+    @media (min-width: @tablet) {
+      order: 2;
+    }
+    
+  }
   
   &__title {
     font-weight: bold;
@@ -103,6 +160,10 @@
     
     @media (min-width: @mobile) {
       padding-top: 10px;
+    }
+    
+    @media (min-width: @narrow-desktop) {
+      padding-top: 26px;
     }
   }
   
@@ -133,5 +194,18 @@
   
   @media (min-width: @narrow-tablet) {
     left: 47.344%;
+  }
+    
+  @media (min-width: @fix-tablet) {
+    left: 47.57%;
+  }
+  
+  @media (min-width: @tablet) {
+    bottom: 203px;
+    left: 47.875%;
+  }
+  
+  @media (min-width: @narrow-desktop) {
+    left: 48.3%;
   }
 }

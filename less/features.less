@@ -1,0 +1,133 @@
+.features {
+  min-height: 723px;
+  padding-top: 63px;
+  background-color: @light-grey-fill;
+  background-image: url("../img/triangle-white.svg"),
+    url("../img/screen-mobile-3.png");
+  background-repeat: no-repeat;
+  background-position: top left, bottom center;
+  
+  @media (min-width: @mobile) {
+    min-height: 487px;
+    padding-top: 0;
+    background-image: url("../img/iphone-screen-tablet-3@1x.png"),
+      url("../img/triangle-white.svg");
+    background-position: bottom left, top left;
+    background-position-x: 40px, 0;
+    background-size: 38.386%, auto;
+  }
+  
+  @media (min-width: @fix-tablet) and (max-width: @tablet) {
+      background-size: auto, auto;
+    }
+  
+  @media (min-width: @tablet) {
+    min-height: 590px;
+    background-image: url("../img/triangle-white.svg");
+    background-position: top left;
+    background-size: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media (min-width: @tablet) and (max-width: @narrow-desktop) {
+    justify-content: space-around;
+  }
+  
+  &__item {
+    min-height: 140px;
+    width: 280px;
+    margin: 0 auto;
+    text-align: center;
+    
+    @media (min-width: @mobile) {
+      width: 44.286%;
+      margin: 0;
+      margin-left: 50%;
+      text-align: left;
+      padding-top: 2px;
+
+      &:first-child {
+        padding-top: 59px;
+      }
+    }
+    
+    @media (min-width: @tablet) {
+      padding-top: 338px;
+      width: 26.666%;
+      text-align: center;
+      margin: 0;
+      background-repeat: no-repeat;
+      background-position: top center;
+      
+      &:first-child {
+        padding-top: 338px;
+      }
+      
+      &--mood {
+        background-image: url("../img/iphone-screen-desktop-1@1x.png");
+      }
+      
+      &--change {
+        background-image: url("../img/iphone-screen-desktop-2@1x.png");
+      }
+      
+      &--friends {
+       background-image: url("../img/iphone-screen-desktop-3@1x.png");
+       
+      }
+    }
+    
+  }
+
+  &__title {
+    color: @dark-text;
+    font-weight: bold;
+    font-size: @title-font;
+    line-height: @base-line;
+    margin: 0 auto;
+    padding-top: 17px;
+    
+    @media (min-width: @mobile){
+      margin: 0;
+    }
+    
+    @media (min-width: @tablet) {
+      font-size: @w-title-font;
+      line-height: @higher-line;
+//      width: 71.875%;
+      width: 78.125%;
+      margin: 0 auto;
+    }
+    
+    @media (min-width: @tablet) and (max-width: @narrow-desktop) {
+      width: 100%;
+    }
+  }
+  
+  &__text {
+    color: @text-color;
+    font-weight: normal;
+    font-size: @base-font;
+    line-height: @base-line;
+    margin: 0 auto;
+    padding-top: 12px;
+    
+    @media (min-width: @mobile){
+      margin: 0;
+    }
+    
+    @media (min-width: @tablet) {
+      width: 78.125%;
+      margin: 0 auto;
+      font-size: @title-font;
+      line-height: @higher-line;
+      padding-top: 26px;
+    }
+
+    @media (min-width: @tablet) and (max-width: @narrow-desktop) {
+      width: 100%;
+    }
+    
+  }
+}

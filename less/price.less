@@ -12,6 +12,11 @@
     min-height: 289px;
   }
   
+  @media (min-width: @tablet) {
+    min-height: 376px;
+    padding-top: 155px;
+  }
+  
   &__table {
     position: relative;
     margin: 0 auto;
@@ -25,7 +30,15 @@
     @media (min-width: @mobile) and (max-width: @narrow-tablet) {
       width: 100%;
     }
-    
+
+    @media (min-width: @tablet) {
+       width: 78.333%;
+    }
+  
+    @media (min-width: @tablet) and (max-width: @narrow-desktop) {
+       width: 92%;
+    }
+  
   }
   
   &__mob-table-back {
@@ -62,6 +75,11 @@
       width: 152px;
       min-height: 72px;
       border: 2px solid @dark-grey;
+    }
+
+    @media (min-width: @tablet) {
+      min-height: 98px;
+      width: 232px;
     }
     
   }
@@ -125,6 +143,13 @@
       border-right: 27px solid @pink-color;
     }
     
+    @media (min-width: @tablet) {
+      top: -52px;
+      left: -49px;
+      width: 46px;
+      height: 46px;
+    }
+    
     &::after {
       position: absolute;
       display: none;
@@ -146,6 +171,11 @@
       @media (min-width: @mobile) {
         top: -2px;
         left: 27px;
+      }
+      
+      @media (min-width: @tablet) {
+        top: 12px;
+        left: 44px;
       }
     }
     
@@ -173,6 +203,12 @@
       line-height: @high-line;
       padding-top: 11px;
     }
+    
+    @media (min-width: @tablet) {
+      padding-top: 14px;
+      font-size: @title-font;
+      line-height: @higher-line;
+    }
   }
   
   &__main-item {
@@ -188,6 +224,13 @@
       line-height: @high-line;
       padding-bottom: 8px;
       padding-top: 0;
+    }
+
+    @media (min-width: @tablet) {
+      padding-top: 2px;
+      font-size: @large-font;
+      line-height: @higher-line;
+      padding-bottom: 18px;
     }
   }
   
@@ -219,6 +262,15 @@
       border-top: 2px solid @border-light-grey;
     }
     
+    @media (min-width: @tablet) {
+      width: 212px;
+      min-height: 59px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      padding-left: 22px;
+      font-size: @title-font;
+    }
+    
     &-row {
       display: flex;
       
@@ -239,6 +291,11 @@
         width: 152px;
         border-left: 2px solid @border-light-grey;
         border-top: 2px solid @border-light-grey;
+      }
+      
+      @media (min-width: @tablet) {
+        width: 232px;
+        min-height: 59px;
       }
       
       &--yes {
