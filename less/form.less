@@ -1,13 +1,28 @@
 .contest-page-header {
   min-height: 237px;
+  background-color: @dark-dark-grey;
   background-image: url("../img/background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/background-mobile@2x.jpg");
+  }
+  
+  @media (min-resolution: 2.25dppx) {
+    background-image: url("../img/background-mobile@3x.jpg");
+  }
+  
   @media (min-width: @mobile) {
     min-height: 440px;
     background-image: url("../img/background-tablet@1x.jpg");
+    
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      background-image: url("../img/background-tablet@2x.jpg");
     }
+  }
   
   @media (min-width: @tablet) {
     min-height: 394px;
@@ -391,9 +406,11 @@
     &:hover {
       border-color: @dark-grey;
     }
-      
+    
+    &:focus,
     &:active {
       border-color: @pink-color;
+      outline: none;
     }
     
     @media (min-width: @mobile) {

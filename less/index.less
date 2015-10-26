@@ -31,9 +31,19 @@ body {
 
 .promo-page-header {
   min-height: 457px;
+  background-color: @dark-dark-grey;
   background-image: url("../img/background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: bottom center;
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/background-mobile@2x.jpg");
+  }
+  
+  @media (min-resolution: 2.25dppx) {
+    background-image: url("../img/background-mobile@3x.jpg");
+  }
   
   @media (min-width: @mobile) {
     background: none;
@@ -48,6 +58,15 @@ body {
     background-image: url("../img/iphone-hand-mobile.png");
     background-repeat: no-repeat;
     background-position: bottom left;
+    
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      background-image: url("../img/iphone-hand-mobile@2x.png");
+    }
+  
+    @media (min-resolution: 2.25dppx) {
+      background-image: url("../img/iphone-hand-mobile@3x.png");
+    }
     
     @media (min-width: @mobile) {
       min-height: 200px;
@@ -82,12 +101,25 @@ body {
       flex-direction: column;
       align-items: flex-start;
       
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background-image: url("../img/iphone-hand-tablet@2x.png"),
+        url("../img/background-tablet@2x.jpg");
+      }
+      
     }
     
     @media (min-width: @mobile) and (max-width: @narrow-tablet) {
       background-image: url("../img/iphone-hand-mobile.png"),
         url("../img/background-tablet@1x.jpg");
       background-size: auto, auto;
+
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background-image: url("../img/iphone-hand-mobile@2x.png"),
+        url("../img/background-tablet@2x.jpg");
+      }
+      
     }
     
     @media (min-width: @tablet) {
@@ -95,6 +127,13 @@ body {
       background-image: url("../img/iphone-hand-desktop@1x.png"),
         url("../img/background-fullsize.jpg");
       background-size: 87.5%, auto 100%;
+
+      @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background-image: url("../img/iphone-hand-desktop@2x.png"),
+        url("../img/background-fullsize.jpg");
+      }
+    
     }
     
   }
