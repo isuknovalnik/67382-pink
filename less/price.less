@@ -330,12 +330,26 @@
       vertical-align:top;
       border-radius:50%;
       cursor:pointer;
+      
+      &:hover {
+        background-color: @bullet-hover;
+      }
+
+      &:active {
+        background-color: @bullet-active;
+      }
+
     }
 
     & &-item-active {
       background: @light-fill;
       border: 3px solid @dark-grey;
       cursor: default;
+
+      &:hover,
+      &:active {
+        background: @light-fill;
+      }
     }
   }
     

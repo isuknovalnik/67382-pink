@@ -27,6 +27,15 @@
   margin: 0 auto;
   background: url("../img/logotype-blue-tablet.svg") center center no-repeat;
   
+  &:hover {
+    background-image: url("../img/logotype-blue-tablet-hover.svg");
+  }
+  
+  &:active {
+    background-image: url("../img/logotype-blue-tablet.svg");
+    opacity: .3;
+  }
+  
   @media (min-width: @mobile) {
     width: 36.428%;
     min-height: 126px;
@@ -39,6 +48,17 @@
     background: url("../img/logotype-blue-desktop.svg") center center no-repeat;
     background-position: 107px 71px;
     background-size: auto;
+
+    &:hover {
+      background-image: url("../img/logotype-blue-desktop-hover.svg");
+    }
+    
+    &:active {
+      background-image: url("../img/logotype-blue-desktop.svg");
+      opacity: .3;
+  }
+
+
   }
 }
 
@@ -66,20 +86,39 @@
     border: 2px solid @border-social;
     border-radius:50%;
     
+    &:hover {
+      border-color: @dark-grey;
+    }
+    
     @media (min-width: @mobile) {
       margin: 0;
     }
     
     &--tw {
       background: url("../img/twitter.svg") center center no-repeat;
+      
+      &:active {
+        border-color: @border-social;
+        background-image: url("../img/twitter-active.svg");
+      }
     }
     
     &--fb {
       background: url("../img/facebook.svg") center center no-repeat;
+  
+      &:active {
+        border-color: @border-social;
+        background-image: url("../img/facebook-active.svg");
+      }
     }
     
     &--you {
       background: url("../img/youtube.svg") center center no-repeat;
+      
+      &:active {
+        border-color: @border-social;
+        background-image: url("../img/youtube-active.svg");
+      }
     }
 
   }
@@ -107,6 +146,14 @@
     margin-left: 75px;
     
     background: url("../img/htmlacademy.svg") 102px 15px no-repeat;
+    
+    &:hover {
+      background-image: url("../img/htmlacademy-hover.svg");
+    }
+    
+    &:active {
+      background-image: url("../img/htmlacademy-active.svg");
+    }
     
     @media (min-width: @mobile) {
       margin-left: 33.725%;

@@ -43,23 +43,33 @@
       <form class="contest-form" action="#" method="get" enctype="multipart/form-data">
 
         <fieldset class="contest-form__item  contest-form__item--main">
-          <label class="contest-form__label contest-form__label--main" for="name">Имя: *</label>
-          <input class="contest-form__text-input" type="text" name="name" placeholder="Введите ваше имя" required id="name">
-          <label class="contest-form__label contest-form__label--main" for="surname">Фамилия: *</label>
-          <input class="contest-form__text-input" type="text" name="surname" placeholder="Укажите фамилию" required id="surname">
-          <label class="contest-form__label contest-form__label--main" for="patronymic">Отчество:</label>
-          <input class="contest-form__text-input" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic">
+          <div class="contest-form__main-item-wrap">
+            <div class="contest-form__name-wrap">
+              <label class="contest-form__label contest-form__label--main" for="name">Имя: *</label>
+              <input class="contest-form__text-input" type="text" name="name" placeholder="Введите ваше имя" required id="name">
+            </div>
+            <div class="contest-form__name-wrap">
+              <label class="contest-form__label contest-form__label--main" for="surname">Фамилия: *</label>
+              <input class="contest-form__text-input" type="text" name="surname" placeholder="Укажите фамилию" required id="surname">
+            </div>
+            <div class="contest-form__name-wrap">
+              <label class="contest-form__label contest-form__label--main" for="patronymic">Отчество:</label>
+              <input class="contest-form__text-input" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic">
+            </div>
+          </div>
         </fieldset>
 
         <fieldset class="contest-form__item  contest-form__item--radio-inputs">
           <legend class="contest-form__wide-title">С каким приложением путешествовали? *</legend>
           <h3 class="contest-form__title contest-form__title--radio">С каким приложением путешествовали? *</h3>
-          <input class="contest-form__radio-input" type="radio" name="app-type" value="iOS" checked required id="ios">
-          <label class="contest-form__label-radio" for="ios"> Pink для iOS</label>
-          <input class="contest-form__radio-input" type="radio" name="app-type" value="Android" required id="android">
-          <label class="contest-form__label-radio" for="android"> Pink на Android</label>
-          <input class="contest-form__radio-input" type="radio" name="app-type" value="Windows" required id="windows">
-          <label class="contest-form__label-radio" for="windows">  Windows Phone</label>
+          <div class="contest-form__radio-wrap">
+            <input class="contest-form__radio-input" type="radio" name="app-type" value="iOS" checked required id="ios">
+            <label class="contest-form__label-radio" for="ios"> Pink для iOS</label>
+            <input class="contest-form__radio-input" type="radio" name="app-type" value="Android" required id="android">
+            <label class="contest-form__label-radio" for="android"> Pink на Android</label>
+            <input class="contest-form__radio-input" type="radio" name="app-type" value="Windows" required id="windows">
+            <label class="contest-form__label-radio" for="windows">  Windows Phone</label>
+          </div>
         </fieldset>
 
         <fieldset class="contest-form__item  contest-form__item--period">
@@ -98,27 +108,31 @@
           <div class="contest-form__delimiter"></div>
 
           <div class="contest-form__item  contest-form__item--additional-item">
-            <span class="contest-form__text">№</span>
-            <label class="contest-form__label  contest-form__label--additional" for="companion1-name">Имя: *</label>
             <div class="contest-form__add-item-wrap">
+              <span class="contest-form__text">№</span>
+              <label class="contest-form__label  contest-form__label--additional" for="companion1-name">Имя: *</label>
               <span class="contest-form__additional-item-number">1</span>
               <input class="contest-form__text-input  contest-form__text-input--additional" type="text" name="companion1-name" placeholder="Введите ваше имя" required id="companion1-name">
-              <a href="#" class="contest-form__del-item-btn">удалить</a>
             </div>
-            <label class="contest-form__label  contest-form__label--add-second" for="companion1-nickname">ПРОЗВИЩЕ:</label>
-            <input class="contest-form__text-input  contest-form__text-input--add-second" type="text" name="companion1-nickname" placeholder="Ну как же без этого!" id="companion1-nickname">
+            <div class="contest-form__add-second-item-wrap">
+              <label class="contest-form__label  contest-form__label--add-second" for="companion1-nickname">ПРОЗВИЩЕ:</label>
+              <input class="contest-form__text-input  contest-form__text-input--add-second" type="text" name="companion1-nickname" placeholder="Ну как же без этого!" id="companion1-nickname">
+            </div>
+            <a href="#" class="contest-form__del-item-btn">удалить</a>
           </div>
 
           <div class="contest-form__item  contest-form__item--additional-item">
-            <span class="contest-form__text">№</span>
-            <label class="contest-form__label  contest-form__label--additional" for="companion2-name">Имя: *</label>
             <div class="contest-form__add-item-wrap">
+              <span class="contest-form__text">№</span>
+              <label class="contest-form__label  contest-form__label--additional" for="companion2-name">Имя: *</label>
               <span class="contest-form__additional-item-number">2</span>
               <input class="contest-form__text-input  contest-form__text-input--additional" type="text" name="companion2-name" placeholder="Введите ваше имя" required id="companion2-name">
-              <a href="#" class="contest-form__del-item-btn">удалить</a>
             </div>
-            <label class="contest-form__label  contest-form__label--add-second" for="companion2-nickname">ПРОЗВИЩЕ:</label>
-            <input class="contest-form__text-input  contest-form__text-input--add-second" type="text" name="companion2-nickname" placeholder="Ну как же без этого!" id="companion2-nickname">
+            <div class="contest-form__add-second-item-wrap">
+              <label class="contest-form__label  contest-form__label--add-second" for="companion2-nickname">ПРОЗВИЩЕ:</label>
+              <input class="contest-form__text-input  contest-form__text-input--add-second" type="text" name="companion2-nickname" placeholder="Ну как же без этого!" id="companion2-nickname">
+            </div>
+            <a href="#" class="contest-form__del-item-btn">удалить</a>
           </div>
         </fieldset>
 
@@ -126,18 +140,27 @@
         <fieldset class="contest-form__item  contest-form__item--checkboxes">
           <legend class="contest-form__wide-title">Ваши безбашенные достижения в&nbsp;путешествии</legend>
           <h3 class="contest-form__title  contest-form__title--checkboxes">Ваши безбашенные достижения в&nbsp;путешествии</h3>
-          <input class="contest-form__checkbox-input" type="checkbox" name="shark-self" value="shark-self" checked id="shark-self">
-          <label class="contest-form__label-checkbox" for="shark-self"> Сделал селфи с акулой</label>
-          <input class="contest-form__checkbox-input" type="checkbox" name="beach-burned" value="beach-burned" checked id="beach-burned">
-          <label class="contest-form__label-checkbox" for="beach-burned"> Обгорел на пляже</label>
-          <input class="contest-form__checkbox-input" type="checkbox" name="saw-chuck-norris" value="saw-chuck-norris" id="saw-chuck-norris">
-          <label class="contest-form__label-checkbox" for="saw-chuck-norris"> Видел Чака Норриса</label>
-          <input class="contest-form__checkbox-input" type="checkbox" name="souvenirs" value="souvenirs" id="souvenirs">
-          <label class="contest-form__label-checkbox" for="souvenirs"> Накупил сувениров</label>
-          <input class="contest-form__checkbox-input" type="checkbox" name="hold-tower" value="hold-tower" checked id="hold-tower">
-          <label class="contest-form__label-checkbox" for="hold-tower"> Удержал башню</label>
-          <input class="contest-form__checkbox-input" type="checkbox" name="crushed-hotel" value="crushed-hotel" id="crushed-hotel">
-          <label class="contest-form__label-checkbox" for="crushed-hotel"> Разгромил отель</label>
+          <div class="contest-form__checkbox-wrap">
+           
+           <div class="contest-form__checkbox-wrap-col1">
+             <input class="contest-form__checkbox-input" type="checkbox" name="shark-self" value="shark-self" checked id="shark-self">
+             <label class="contest-form__label-checkbox" for="shark-self"> Сделал селфи с акулой</label>
+             <input class="contest-form__checkbox-input" type="checkbox" name="beach-burned" value="beach-burned" checked id="beach-burned">
+             <label class="contest-form__label-checkbox" for="beach-burned"> Обгорел на пляже</label>
+           </div>
+           <div class="contest-form__checkbox-wrap-col2">
+             <input class="contest-form__checkbox-input" type="checkbox" name="saw-chuck-norris" value="saw-chuck-norris" id="saw-chuck-norris">
+             <label class="contest-form__label-checkbox" for="saw-chuck-norris"> Видел Чака Норриса</label>
+             <input class="contest-form__checkbox-input" type="checkbox" name="souvenirs" value="souvenirs" id="souvenirs">
+             <label class="contest-form__label-checkbox" for="souvenirs"> Накупил сувениров</label>
+           </div>
+           <div class="contest-form__checkbox-wrap-col3">
+             <input class="contest-form__checkbox-input" type="checkbox" name="hold-tower" value="hold-tower" checked id="hold-tower">
+             <label class="contest-form__label-checkbox" for="hold-tower"> Удержал башню</label>
+             <input class="contest-form__checkbox-input" type="checkbox" name="crushed-hotel" value="crushed-hotel" id="crushed-hotel">
+             <label class="contest-form__label-checkbox" for="crushed-hotel"> Разгромил отель</label>
+            </div>
+          </div>
         </fieldset>
 
         <fieldset class="contest-form__item  contest-form__item--files">
@@ -201,6 +224,7 @@
         <div class="contest-form__submit-wrap">
           <input class="contest-form__submit-button" name="contest-submit" type="submit" value="Отправить форму">
           <div class="contest-form__hint-text"><span class="contest-form__hint-text  contest-form__hint-text--hint-symbol">*</span> — обязательные поля</div>
+          <div class="contest-form__hint-text  contest-form__hint-text--wide"><span class="contest-form__hint-text  contest-form__hint-text--hint-symbol-wide">*</span> — обязательные для заполнения поля</div>
         </div>
         
       </form>

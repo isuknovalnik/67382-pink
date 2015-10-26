@@ -170,6 +170,21 @@
   & a {
     text-decoration: none;
   }
+  
+  &--e-mail &__text {
+
+    &:hover {
+      color: @text-color;
+      text-decoration: underline;
+    }
+    
+    &:active {
+      color: @text-color;
+      text-decoration: none;
+      opacity: .3;
+    }
+    
+  }
 }
 
 .map-label {

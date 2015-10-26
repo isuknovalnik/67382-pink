@@ -334,6 +334,14 @@ body {
     background-image: url("../img/review-arrow-left.svg");
     background-repeat: no-repeat;
     
+    &:hover {
+      background-image: url("../img/review-arrow-left-hvr.svg");
+    }
+
+    &:active {
+      opacity: .15;
+    }
+    
     @media (max-width: @tablet) {
       display: none;
     }
@@ -349,6 +357,13 @@ body {
     background-image: url("../img/review-arrow-right.svg");
     background-repeat: no-repeat;
     
+    &:hover {
+      background-image: url("../img/review-arrow-right-hvr.svg");
+    }
+
+    &:active {
+      opacity: .15;
+    }
 
     @media (max-width: @tablet) {
       display: none;
@@ -472,12 +487,26 @@ body {
       vertical-align:top;
       border-radius:50%;
       cursor:pointer;
+
+      &:hover {
+        background-color: @bullet-hover;
+      }
+
+      &:active {
+        background-color: @bullet-active;
+      }
+    
     }
 
     & &-item-active {
       background: @light-fill;
       border: 3px solid @dark-grey;
       cursor: default;
+      
+      &:hover,
+      &:active {
+        background: @light-fill;
+      }
     }
     
   }

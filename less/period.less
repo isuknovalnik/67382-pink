@@ -12,6 +12,14 @@
     @media (min-width: @mobile) and (max-width: @narrow-tablet) {
       justify-content: space-around;
     }
+    
+    @media (min-width: @tablet) {
+      padding-top: 18px;
+      width: 93.617%;
+      min-height: 132px;
+      justify-content: space-around;
+    }
+    
   }
   
   &__text-input {
@@ -27,6 +35,14 @@
     margin: 0 auto;
     padding-left: 20px;
 
+    &:hover {
+      border-color: @dark-grey;
+    }
+      
+    &:active {
+      border-color: @pink-color;
+    }
+    
     @media (min-width: @mobile) {
       width: 216px;
       margin: 0;
@@ -42,6 +58,12 @@
 
     &:disabled {
       background-color: @light-grey-fill;
+      
+      &:hover,
+      &:active {
+        border-color: @border-light-grey;
+      }
+
     }
 
     &--number {
@@ -86,6 +108,15 @@
     font-size: 0;
     vertical-align:middle;
     text-align: center;
+
+    &:hover {
+      border-color: @dark-grey;
+    }
+      
+    &:active {
+      color: @light-fill;
+      background-color: @dark-grey;
+    }
     
     @media (min-width: @mobile) {
       width: 59px;
@@ -100,8 +131,8 @@
       line-height: 58px;
       font-weight: 400;
       display: inline-block;
-
     }
+
   }
   
   &__incr-btn {
@@ -119,6 +150,15 @@
     vertical-align: middle;
     text-align: center;
 
+    &:hover {
+      border-color: @dark-grey;
+    }
+      
+    &:active {
+      color: @light-fill;
+      background-color: @dark-grey;
+    }
+    
     @media (min-width: @mobile) {
       width: 59px;
     }
@@ -173,14 +213,27 @@
   
   &__start-wrap {
     order: 1;
+        
+    @media (min-width: @tablet) {
+      margin: 0 5px;
+    }
+
   }
 
   &__length-wrap {
     order: 2;
+
+    @media (min-width: @tablet) {
+      margin: 0 5px;
+    }
   }
   
   &__end-wrap {
     order: 3;
+
+    @media (min-width: @tablet) {
+      margin: 0 5px;
+    }
   }
 
 }
