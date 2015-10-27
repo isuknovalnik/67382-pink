@@ -27,8 +27,17 @@ module.exports = function(grunt) {
 
     watch: {
       style: {
-        files: ['less/**/*.less'],
+        files: ['source/less/**/*.less'],
         tasks: ['less', 'postcss'],
+        options: {
+          spawn: false,
+          livereload: true
+        }
+      },
+      
+      html: {
+        files: ['source/*.html'],
+        tasks: ['copy:html'],
         options: {
           spawn: false,
           livereload: true
@@ -52,6 +61,16 @@ module.exports = function(grunt) {
           ],
           dest: "build"
         }]
+      },
+      
+      html: {
+        files: [{
+          expand: true,
+          cwd: "source",
+          src: ["*.html"],
+          dest: "build"
+        }]
+        
       }
     },
     
@@ -93,7 +112,7 @@ module.exports = function(grunt) {
     "copy",
     "less",
     "postcss",
-    "imagemin",
+//    "imagemin",
     "cssmin",
     "jsmin-sourcemap"
   ]);

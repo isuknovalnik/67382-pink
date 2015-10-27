@@ -245,7 +245,7 @@
     font-weight: 400;
     text-transform: uppercase;
     color: @text-color;
-    background-color: @light-fill;
+    background: none;
     border: 2px solid @border-light-grey;
     border-right: none;
     border-top: none;
@@ -273,6 +273,7 @@
     
     &-row {
       display: flex;
+      background-color: @light-fill;
       
       @media (min-width: @mobile) {
         display: table-row;
