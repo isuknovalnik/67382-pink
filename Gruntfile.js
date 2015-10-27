@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          'css/style.css': 'less/style.less'
+          "build/css/style.css": ["source/less/style.less"]
         }
       }
     },
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         ]
       },
       style: {
-        src: 'css/*.css'
+        src: "build/css/style.css"
       }
     },
 
@@ -34,8 +34,69 @@ module.exports = function(grunt) {
           livereload: true
         }
       }
+    },
+    
+    clean: {
+       build: ["build"]
+    },
+  
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          cwd: "source",
+          src: [
+            "img/**",
+            "js/**",
+            "*.html"
+          ],
+          dest: "build"
+        }]
+      }
+    },
+    
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          src: ["build/img/**/*.{png,jpg,gif,svg}"]
+        }]
+      }
+    },
+    
+    cssmin: {
+      options: {
+        keepSpecialComments: 0,
+        report: "gzip"
+      },
+      style: {
+        files: {
+          "build/css/style.min.css": ["build/css/style.css"]
+        }
+      }
+    },
+    
+    'jsmin-sourcemap': {
+      all: {
+        src: ['source/js/script.js'],
+        dest: 'build/js/script.min.js'
+      },
     }
+      
   };
+  
+   grunt.registerTask("build", [
+    "clean",
+    "copy",
+    "less",
+    "postcss",
+    "imagemin",
+    "cssmin",
+    "jsmin-sourcemap"
+  ]);
 
   config = require('./.gosha')(grunt, config);
 
