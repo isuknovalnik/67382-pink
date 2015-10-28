@@ -45,8 +45,8 @@ if (daysNumber) {
   daysIncr.addEventListener("click", function(event) {
     event.preventDefault();
     daysCounter++;
-      if (daysCounter > 999) {
-       daysCounter = 999;
+      if (daysCounter > 110) {
+       daysCounter = 110;
       }
     daysNumber.value = daysCounter + " " + daysTail(daysCounter);
 
@@ -68,8 +68,8 @@ if (daysNumber) {
     daysCounter = parseInt(daysNumber.value, 10);
     if ((!daysCounter) || (daysCounter < 0)) {
       daysCounter = 0;
-    } else if (daysCounter > 999) {
-            daysCounter = 999;
+    } else if (daysCounter > 110) {
+            daysCounter = 110;
     }
 
     daysNumber.value = daysCounter + " " + daysTail(daysCounter);
@@ -103,8 +103,8 @@ if (peopleNumber) {
   peopleIncr.addEventListener("click", function(event) {
     event.preventDefault();
     peopleCounter++;
-      if (peopleCounter > 99) {
-       peopleCounter = 99;
+      if (peopleCounter > 10) {
+       peopleCounter = 10;
       }
     peopleNumber.value = peopleCounter + " чел";
 
@@ -126,8 +126,8 @@ if (peopleNumber) {
     peopleCounter = parseInt(peopleNumber.value, 10);
     if ((!peopleCounter) || (peopleCounter < 0)) {
       peopleCounter = 0;
-    } else if (peopleCounter > 99) {
-            peopleCounter = 99;
+    } else if (peopleCounter > 10) {
+            peopleCounter = 10;
     }
 
     peopleNumber.value = peopleCounter + " чел";

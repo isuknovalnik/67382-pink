@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     watch: {
       style: {
         files: ['source/less/**/*.less'],
-        tasks: ['less', 'postcss'],
+        tasks: ['less', 'postcss', 'cssmin'],
         options: {
           spawn: false,
           livereload: true
@@ -42,7 +42,17 @@ module.exports = function(grunt) {
           spawn: false,
           livereload: true
         }
+      },
+      
+      jscript: {
+        files: ['source/js/*.js'],
+        tasks: ['jsmin-sourcemap'],
+        options: {
+          spawn: false,
+          livereload: true
+        }
       }
+
     },
     
     clean: {
