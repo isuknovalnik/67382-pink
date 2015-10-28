@@ -226,10 +226,26 @@ body {
 }
 
 .promo-page-content {
+  position: relative;
   min-height: 207px;
   padding-top: 10px;
   background-color: @light-fill;
-
+  z-index: 3;
+  
+  &::after {
+    background-color: @light-fill;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 30%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(-4.4deg);
+    transform-origin: 100%;
+    z-index: -1;
+  }
+  
   @media (min-width: @mobile) {
     min-height: 190px;
     padding-top: 49px;
@@ -442,8 +458,6 @@ body {
     transform-origin: 100%;
     z-index: -1;
   }
-  
-
   
   @media (min-width: @mobile) {
     min-height: 307px;
