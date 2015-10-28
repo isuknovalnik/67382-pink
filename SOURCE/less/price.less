@@ -3,9 +3,6 @@
   min-height: 380px;
   padding-top: 91px;
   background-color: @light-grey-fill;
-  background-image: url("../img/triangle-white.svg");
-  background-repeat: no-repeat;
-  background-position: top left;
   
   @media (min-width: @mobile) {
     padding-top: 89px;
@@ -245,7 +242,7 @@
     font-weight: 400;
     text-transform: uppercase;
     color: @text-color;
-    background-color: @light-fill;
+    background: none;
     border: 2px solid @border-light-grey;
     border-right: none;
     border-top: none;
@@ -264,7 +261,7 @@
     
     @media (min-width: @tablet) {
       width: 212px;
-      min-height: 59px;
+//      min-height: 59px;
       padding-top: 14px;
       padding-bottom: 14px;
       padding-left: 22px;
@@ -273,6 +270,7 @@
     
     &-row {
       display: flex;
+      background-color: @light-fill;
       
       @media (min-width: @mobile) {
         display: table-row;
