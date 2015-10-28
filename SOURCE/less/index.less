@@ -424,8 +424,26 @@ body {
 
 
 .slider-reviews {
+  position: relative;
   min-height: 353px;
   background-color: @light-fill;
+  z-index: 1;
+  
+  &::before {
+    background-color: @light-fill;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 30%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(-4.4deg);
+    transform-origin: 100%;
+    z-index: -1;
+  }
+  
+
   
   @media (min-width: @mobile) {
     min-height: 307px;
