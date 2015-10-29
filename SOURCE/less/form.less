@@ -73,7 +73,7 @@
 }
 
 .contest-page-content {
-  min-height: 177px;
+  min-height: 147px;
   background-color: @light-fill;
   
   @media (min-width: @mobile) {
@@ -105,6 +105,14 @@
 
     @media (min-width: @fix-contacts) {
       width: 780px;
+    }
+    
+    &-wide {
+      display: none;
+      
+      @media (min-width: @mobile) {
+        display: inline;
+      }
     }
     
   }
@@ -152,7 +160,7 @@
     height: 33px;
     width: 280px;
     margin: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
     background: none;
     border-bottom: 2px solid @border-light-grey;
     
@@ -752,6 +760,11 @@
         display: none;
     }
     
+    &--period {
+//      padding-top: 45px;
+      margin: 0 auto;
+    }
+    
     &--radio {
       padding-bottom: 0;
       padding-top: 30px;
@@ -766,11 +779,13 @@
     
     &--checkboxes {
       padding-bottom: 43px;
+      margin: 0 auto;
     }
     
     &--files {
       padding-bottom: 33px;
       padding-top: 30px;
+      margin: 0 auto;
     }
   }
   
@@ -845,8 +860,8 @@
      
     &--additional-item {
       min-height: 208px;
-      padding-top: 28px;
-      padding-bottom: 12px;
+      padding-top: 25px;
+      padding-bottom: 8px;
       
       @media (min-width: @mobile) {
         position: relative;
@@ -914,11 +929,10 @@
         width: 92%;
       }
       
-      
     }
      
     &--files {
-      min-height: 565px;
+      min-height: 560px;
       padding-left: 0;
       padding-right: 0;
       padding-bottom: 0;
@@ -1093,7 +1107,7 @@
 .image-preview {
   position: relative;
   display: inline-block;
-  margin: 9px 19px;
+  margin: 8px 19px;
   
   @media (min-width: @mobile) {
 //    margin: 23px 42px;
