@@ -564,26 +564,32 @@ margin-top: 47px;;
       &::before {
         position: absolute;
         content: "";
-        top: -5px;
-        left: 7px;
+        top: -2px;
+        left: 9px;
         display: block;
-        width:36px;
-        height:36px;
+        width:14px;
+        height:14px;
         background-color: @light-fill;
-        border: 2px solid @border-light-grey;
+        border: 11px solid @light-fill;
         border-radius:50%;
+        box-shadow: 0 0 0 2px @border-light-grey;
       }
       
       &:hover::before {
-        border-color: @dark-grey;
+        box-shadow: 0 0 0 2px @dark-grey;
       }
       
       &:active::before {
-        border-color: @pink-color;
+        box-shadow: 0 0 0 2px @pink-color;
       }
     }
+
+    &:checked +label::before {
+      background-color: @pink-color;
+    }
+
     
-    &:checked +label::after {
+/*    &:checked +label::after {
       position: absolute;
       content: "";
       top: -1px;
@@ -592,10 +598,11 @@ margin-top: 47px;;
       width:14px;
       height:14px;
       background-color: @pink-color;
-      border: 9px solid @light-fill;
+      border: 11px solid @light-fill;
       border-radius:50%;
-
+      box-shadow: 0 0 0 2px green;
     }
+*/
   }
 
   &__checkbox-wrap {
