@@ -38,96 +38,99 @@ window.addEventListener("keydown", function(event) {
 });
 
 // Количество дней
-var daysCounter = parseInt(daysNumber.value, 10);
+if (daysNumber) {
+  var daysCounter = parseInt(daysNumber.value, 10);
 
 
-daysIncr.addEventListener("click", function(event) {
-  event.preventDefault();
-  daysCounter++;
-    if (daysCounter > 999) {
-     daysCounter = 999;
+  daysIncr.addEventListener("click", function(event) {
+    event.preventDefault();
+    daysCounter++;
+      if (daysCounter > 110) {
+       daysCounter = 110;
+      }
+    daysNumber.value = daysCounter + " " + daysTail(daysCounter);
+
+  });
+
+  daysDecr.addEventListener("click", function(event) {
+    event.preventDefault();
+    daysCounter--;
+    if (daysCounter < 0) {
+       daysCounter = 0;
     }
-  daysNumber.value = daysCounter + " " + daysTail(daysCounter);
 
-});
+    daysNumber.value = daysCounter + " " + daysTail(daysCounter);
 
-daysDecr.addEventListener("click", function(event) {
-  event.preventDefault();
-  daysCounter--;
-  if (daysCounter < 0) {
-     daysCounter = 0;
-  }
-  
-  daysNumber.value = daysCounter + " " + daysTail(daysCounter);
+  });
 
-});
+  daysNumber.addEventListener("change", function(event) {
+    event.preventDefault();
+    daysCounter = parseInt(daysNumber.value, 10);
+    if ((!daysCounter) || (daysCounter < 0)) {
+      daysCounter = 0;
+    } else if (daysCounter > 110) {
+            daysCounter = 110;
+    }
 
-daysNumber.addEventListener("change", function(event) {
-  event.preventDefault();
-  daysCounter = parseInt(daysNumber.value, 10);
-  if ((!daysCounter) || (daysCounter < 0)) {
-    daysCounter = 0;
-  } else if (daysCounter > 999) {
-          daysCounter = 999;
-  }
+    daysNumber.value = daysCounter + " " + daysTail(daysCounter);
+  });
 
-  daysNumber.value = daysCounter + " " + daysTail(daysCounter);
-});
-
-function daysTail (counter) {
-  if ((counter > 10) && (counter < 20)) {
-    return("дней");
-  }
-  var strCounter = String(counter);
-  var lastDigit = strCounter[strCounter.length-1];
-  switch (lastDigit) {
-    case "1":
-      return("день");
-      break;
-    case "2":
-    case "3":
-    case "4":
-      return("дня");
-      break;
-    default:
+  function daysTail (counter) {
+    if ((counter > 10) && (counter < 20)) {
       return("дней");
+    }
+    var strCounter = String(counter);
+    var lastDigit = strCounter[strCounter.length-1];
+    switch (lastDigit) {
+      case "1":
+        return("день");
+        break;
+      case "2":
+      case "3":
+      case "4":
+        return("дня");
+        break;
+      default:
+        return("дней");
+    }
+
   }
+}
+// Количество попутчиков
+if (peopleNumber) {
+  var peopleCounter = parseInt(peopleNumber.value, 10);
+
+  peopleIncr.addEventListener("click", function(event) {
+    event.preventDefault();
+    peopleCounter++;
+      if (peopleCounter > 10) {
+       peopleCounter = 10;
+      }
+    peopleNumber.value = peopleCounter + " чел";
+
+  });
+
+  peopleDecr.addEventListener("click", function(event) {
+    event.preventDefault();
+    peopleCounter--;
+    if (peopleCounter < 0) {
+       peopleCounter = 0;
+    }
+
+    peopleNumber.value = peopleCounter + " чел";
+
+  });
+
+  peopleNumber.addEventListener("change", function(event) {
+    event.preventDefault();
+    peopleCounter = parseInt(peopleNumber.value, 10);
+    if ((!peopleCounter) || (peopleCounter < 0)) {
+      peopleCounter = 0;
+    } else if (peopleCounter > 10) {
+            peopleCounter = 10;
+    }
+
+    peopleNumber.value = peopleCounter + " чел";
+});
 
 }
-
-// Количество попутчиков
-var peopleCounter = parseInt(peopleNumber.value, 10);
-
-peopleIncr.addEventListener("click", function(event) {
-  event.preventDefault();
-  peopleCounter++;
-    if (peopleCounter > 99) {
-     peopleCounter = 99;
-    }
-  peopleNumber.value = peopleCounter + " чел";
-
-});
-
-peopleDecr.addEventListener("click", function(event) {
-  event.preventDefault();
-  peopleCounter--;
-  if (peopleCounter < 0) {
-     peopleCounter = 0;
-  }
-  
-  peopleNumber.value = peopleCounter + " чел";
-
-});
-
-peopleNumber.addEventListener("change", function(event) {
-  event.preventDefault();
-  peopleCounter = parseInt(peopleNumber.value, 10);
-  if ((!peopleCounter) || (peopleCounter < 0)) {
-    peopleCounter = 0;
-  } else if (peopleCounter > 99) {
-          peopleCounter = 99;
-  }
-
-  peopleNumber.value = peopleCounter + " чел";
-});
-

@@ -1,5 +1,8 @@
 .contest-page-header {
   min-height: 237px;
+  max-width: @desktop;
+  margin: 0 auto;
+
   background-color: @dark-dark-grey;
   background-image: url("../img/background-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -28,6 +31,23 @@
     min-height: 394px;
     background-image: url("../img/background-fullsize.jpg");
     background-size: 100%;
+  }
+  
+  @media (min-width: @desktop) {
+    background: none;
+  }
+  
+  &-wide-wrap {
+    background: none;
+    
+    @media (min-width: @desktop) {
+      background-color: @dark-dark-grey;
+      background-image: url("../img/background-fullsize.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+      
+    }
   }
   
   &__text {
@@ -60,6 +80,12 @@
     min-height: 198px;
   }
   
+  &-wrap {
+   max-width: @wide-desktop;
+   margin: 0 auto;
+   padding: 0;
+  }
+  
   &__text {
     width: 280px;
     color: @text-color;
@@ -87,6 +113,7 @@
 .contest-form {
 
   padding-bottom: 30px;
+  background-color: @light-fill;
   
   @media (min-width: @tablet) {
     padding-bottom: 0;
