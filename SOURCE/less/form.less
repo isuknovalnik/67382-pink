@@ -73,7 +73,7 @@
 }
 
 .contest-page-content {
-  min-height: 177px;
+  min-height: 147px;
   background-color: @light-fill;
   
   @media (min-width: @mobile) {
@@ -81,7 +81,7 @@
   }
   
   &-wrap {
-   max-width: @wide-desktop;
+   max-width: @desktop;
    margin: 0 auto;
    padding: 0;
   }
@@ -105,6 +105,14 @@
 
     @media (min-width: @fix-contacts) {
       width: 780px;
+    }
+    
+    &-wide {
+      display: none;
+      
+      @media (min-width: @mobile) {
+        display: inline;
+      }
     }
     
   }
@@ -152,7 +160,7 @@
     height: 33px;
     width: 280px;
     margin: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
     background: none;
     border-bottom: 2px solid @border-light-grey;
     
@@ -522,11 +530,13 @@
   &__radio-wrap {
     @media (min-width: @tablet) {
       width: 87.234%;
-      min-height: 130px;
+//      min-height: 130px;
+      min-height: 83px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+margin-top: 47px;;
+      //      align-items: center;
     }
   }
   
@@ -554,26 +564,32 @@
       &::before {
         position: absolute;
         content: "";
-        top: -5px;
-        left: 7px;
+        top: -2px;
+        left: 9px;
         display: block;
-        width:36px;
-        height:36px;
+        width:14px;
+        height:14px;
         background-color: @light-fill;
-        border: 2px solid @border-light-grey;
+        border: 11px solid @light-fill;
         border-radius:50%;
+        box-shadow: 0 0 0 2px @border-light-grey;
       }
       
       &:hover::before {
-        border-color: @dark-grey;
+        box-shadow: 0 0 0 2px @dark-grey;
       }
       
       &:active::before {
-        border-color: @pink-color;
+        box-shadow: 0 0 0 2px @pink-color;
       }
     }
+
+    &:checked +label::before {
+      background-color: @pink-color;
+    }
+
     
-    &:checked +label::after {
+/*    &:checked +label::after {
       position: absolute;
       content: "";
       top: -1px;
@@ -582,10 +598,11 @@
       width:14px;
       height:14px;
       background-color: @pink-color;
-      border: 9px solid @light-fill;
+      border: 11px solid @light-fill;
       border-radius:50%;
-
+      box-shadow: 0 0 0 2px green;
     }
+*/
   }
 
   &__checkbox-wrap {
@@ -721,16 +738,18 @@
   }
 
   &__wide-title {
-    color: @pink-color;
-    font-size: @base-font;
-    line-height: @low-line;
-    font-weight: 400;
-    text-align: center;
-    text-transform: uppercase;
     display: none;
       
     @media (min-width: @mobile) {
-        display: block;
+      display: block;
+      color: @pink-color;
+      font-size: @base-font;
+      line-height: @low-line;
+      font-weight: 400;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: @light-fill;
+      padding: 0px 25px;
     }
     
   }
@@ -750,6 +769,11 @@
         display: none;
     }
     
+    &--period {
+//      padding-top: 45px;
+      margin: 0 auto;
+    }
+    
     &--radio {
       padding-bottom: 0;
       padding-top: 30px;
@@ -764,11 +788,13 @@
     
     &--checkboxes {
       padding-bottom: 43px;
+      margin: 0 auto;
     }
     
     &--files {
       padding-bottom: 33px;
       padding-top: 30px;
+      margin: 0 auto;
     }
   }
   
@@ -843,8 +869,8 @@
      
     &--additional-item {
       min-height: 208px;
-      padding-top: 28px;
-      padding-bottom: 12px;
+      padding-top: 25px;
+      padding-bottom: 8px;
       
       @media (min-width: @mobile) {
         position: relative;
@@ -912,11 +938,10 @@
         width: 92%;
       }
       
-      
     }
      
     &--files {
-      min-height: 565px;
+      min-height: 560px;
       padding-left: 0;
       padding-right: 0;
       padding-bottom: 0;
@@ -985,7 +1010,8 @@
       width: 88.571%;
       margin: 0 auto;
       display: flex;
-      justify-content: center;
+//      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       align-content: stretch;
       margin-bottom: 34px;
@@ -993,7 +1019,7 @@
     
     @media (min-width: @tablet) {
       width: 78.333%;
-      justify-content: space-between;
+//      justify-content: space-between;
       margin-bottom: 0;
     }
   }
@@ -1090,10 +1116,14 @@
 .image-preview {
   position: relative;
   display: inline-block;
-  margin: 9px 19px;
+  margin: 8px 19px;
   
   @media (min-width: @mobile) {
-    margin: 23px 42px;
+//    margin: 23px 42px;
+    margin-top: 23px;
+    margin-bottom: 23px;
+    margin-left: 56px;
+    margin-right: 14px;
   }
 
   @media (min-width: @tablet) {

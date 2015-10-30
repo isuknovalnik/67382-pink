@@ -6,15 +6,13 @@ body {
   font-size: @base-font;
   line-height: @base-line;
   color: @text-color;
-  background-color: @dark-dark-grey;
+  background-color: @light-fill;
+  @media (min-width: @desktop) {
+    background-color: @border-light-grey;
+  }
   font-weight: normal;
   font-family: "Open Sans", "Arial", sans-serif;
   
-  @media (min-width: @desktop) {
-    background-image: url("../img/background-fullsize.jpg");
-    background-size: contain;
-    background-repeat: repeat-y;
-  }
 }
 
 .header-menu-back {
@@ -199,10 +197,6 @@ body {
     }
     
     @media (min-width: @desktop) {
-      background-position: top center;
-    }
-    
-    @media (min-width: @wide-desktop) {
       background-size: cover;
     }
     
@@ -258,7 +252,7 @@ body {
   }
   
   &-wrap {
-   max-width: @wide-desktop;
+   max-width: @desktop;
    margin: 0 auto;
    padding: 0;
   }
