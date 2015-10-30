@@ -1,6 +1,7 @@
 var link = document.querySelector(".main-nav__toggle");
 var header = document.querySelector(".main-header");
 var menu = document.querySelector(".main-nav__list");
+var form = document.querySelector(".contest-form");
 var daysNumber = document.querySelector("#travel-days");
 var daysDecr = document.querySelector(".decrease-days");
 var daysIncr = document.querySelector(".increase-days");
@@ -99,13 +100,19 @@ if (daysNumber) {
 // Количество попутчиков
 if (peopleNumber) {
   var peopleCounter = parseInt(peopleNumber.value, 10);
+  var area = form.querySelector(".contest-form__add-items-area");
+  var template = document.querySelector("#add-people-template").innerHTML;
 
   peopleIncr.addEventListener("click", function(event) {
     event.preventDefault();
     peopleCounter++;
-      if (peopleCounter > 10) {
-       peopleCounter = 10;
-      }
+
+    if (peopleCounter > 10) {
+      peopleCounter = 10;
+    } else {
+      addPerson(peopleCounter);
+    }
+
     peopleNumber.value = peopleCounter + " чел";
 
   });
@@ -115,6 +122,8 @@ if (peopleNumber) {
     peopleCounter--;
     if (peopleCounter < 0) {
        peopleCounter = 0;
+    } else {
+      delPerson ();
     }
 
     peopleNumber.value = peopleCounter + " чел";
@@ -132,5 +141,91 @@ if (peopleNumber) {
 
     peopleNumber.value = peopleCounter + " чел";
 });
+  
+
+  function addPerson(counter) {
+
+    var html = Mustache.render(template, {
+      "personNumber": String(counter)
+    });
+    area.innerHTML = area.innerHTML + html;
+  
+  }
+  
+  function delPerson() {
+    var lastPerson = area.lastElementChild;
+    area.removeChild(lastPerson);
+  }
+
+}
+
+// Отправка формы
+if (form) {
+
+  (function() {
+
+    if (!("FormData" in window)) {
+      return;
+    }
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+    var data = new FormData(form);
+
+    request(data, function(response) {
+      console.log(response);
+    });
+
+    function request(data, fn) {
+
+      var xhr = new XMLHttpRequest();
+      var time = (new Date()).getTime();
+      xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
+
+      xhr.addEventListener("readystatechange", function() {
+      if (xhr.readyState == 4) {
+        console.log(xhr.responseText);
+      }
+    });
+      xhr.send(data);
+    }
+   });
+
+  })();
+
+  // Загрузка картинок
+
+  (function() {
+    var form = document.querySelector(".contest-form");
+
+    form.querySelector("#add-photo").addEventListener("change", function() {
+      var files = this.files;
+
+      for (var i = 0; i < files.length; i++) {
+        preview(files[i]);
+      }
+    });
+
+    function preview(file) {
+      if ("FileReader" in window) {
+        var area = document.querySelector(".photo-previews");
+
+        if (file.type.match(/image.*/)) {
+          var reader = new FileReader();
+
+          reader.addEventListener("load", function(event) {
+            var img = document.createElement("img"); 
+            img.src = event.target.result;
+            img.alt = file.name;
+            img.width = "135";
+            area.appendChild(img);
+          });
+
+          reader.readAsDataURL(file);
+        }
+      }
+    }
+  })();
 
 }

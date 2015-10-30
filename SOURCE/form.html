@@ -20,10 +20,10 @@
             <nav class="main-nav">
               <ul class="main-nav__list">
                 <li class="main-nav__item">
-                  <a href="#">Информация</a>
+                  <a href="index.html">Информация</a>
                 </li>
                 <li class="main-nav__item">
-                  <a href="#">Блог</a>
+                  <a href="blog.html">Блог</a>
                 </li>
                 <li class="main-nav__item">
                   <a href="#">Отзывы</a>
@@ -40,7 +40,7 @@
     
     <div class="contest-page-content-wrap">
       <div class="contest-page-content">
-        <p class="contest-page-content__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+        <p class="contest-page-content__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="contest-page-content__text-wide">Пожалуйста, заполните форму ниже:</span></p>
       </div>
 
       <div class="contest-form-wrap">
@@ -78,7 +78,7 @@
 
           <fieldset class="contest-form__item  contest-form__item--period">
            <legend class="contest-form__wide-title">Когда вы путешествовали? *</legend>
-           <h3 class="contest-form__title">Когда вы путешествовали? *</h3>
+           <h3 class="contest-form__title  contest-form__title--period">Когда вы путешествовали? *</h3>
             <div class="period">
               <div class="period__start-wrap">
                 <input class="period__text-input  period__text-input--start" type="text" name="travel-start" value="1 апреля 2015" id="travel-start" required>
@@ -110,33 +110,35 @@
             </div>
 
             <div class="contest-form__delimiter"></div>
+            
+            <div class="contest-form__add-items-area">
+              <div class="contest-form__item  contest-form__item--additional-item">
+                <div class="contest-form__add-item-wrap">
+                  <span class="contest-form__text">№</span>
+                  <label class="contest-form__label  contest-form__label--additional" for="companion1-name">Имя: *</label>
+                  <span class="contest-form__additional-item-number">1</span>
+                  <input class="contest-form__text-input  contest-form__text-input--additional" type="text" name="companion1-name" placeholder="Введите ваше имя" required id="companion1-name">
+                </div>
+                <div class="contest-form__add-second-item-wrap">
+                  <label class="contest-form__label  contest-form__label--add-second" for="companion1-nickname">ПРОЗВИЩЕ:</label>
+                  <input class="contest-form__text-input  contest-form__text-input--add-second" type="text" name="companion1-nickname" placeholder="Ну как же без этого!" id="companion1-nickname">
+                </div>
+                <a href="#" class="contest-form__del-item-btn">удалить</a>
+              </div>
 
-            <div class="contest-form__item  contest-form__item--additional-item">
-              <div class="contest-form__add-item-wrap">
-                <span class="contest-form__text">№</span>
-                <label class="contest-form__label  contest-form__label--additional" for="companion1-name">Имя: *</label>
-                <span class="contest-form__additional-item-number">1</span>
-                <input class="contest-form__text-input  contest-form__text-input--additional" type="text" name="companion1-name" placeholder="Введите ваше имя" required id="companion1-name">
+              <div class="contest-form__item  contest-form__item--additional-item">
+                <div class="contest-form__add-item-wrap">
+                  <span class="contest-form__text">№</span>
+                  <label class="contest-form__label  contest-form__label--additional" for="companion2-name">Имя: *</label>
+                  <span class="contest-form__additional-item-number">2</span>
+                  <input class="contest-form__text-input  contest-form__text-input--additional" type="text" name="companion2-name" placeholder="Введите ваше имя" required id="companion2-name">
+                </div>
+                <div class="contest-form__add-second-item-wrap">
+                  <label class="contest-form__label  contest-form__label--add-second" for="companion2-nickname">ПРОЗВИЩЕ:</label>
+                  <input class="contest-form__text-input  contest-form__text-input--add-second" type="text" name="companion2-nickname" placeholder="Ну как же без этого!" id="companion2-nickname">
+                </div>
+                <a href="#" class="contest-form__del-item-btn">удалить</a>
               </div>
-              <div class="contest-form__add-second-item-wrap">
-                <label class="contest-form__label  contest-form__label--add-second" for="companion1-nickname">ПРОЗВИЩЕ:</label>
-                <input class="contest-form__text-input  contest-form__text-input--add-second" type="text" name="companion1-nickname" placeholder="Ну как же без этого!" id="companion1-nickname">
-              </div>
-              <a href="#" class="contest-form__del-item-btn">удалить</a>
-            </div>
-
-            <div class="contest-form__item  contest-form__item--additional-item">
-              <div class="contest-form__add-item-wrap">
-                <span class="contest-form__text">№</span>
-                <label class="contest-form__label  contest-form__label--additional" for="companion2-name">Имя: *</label>
-                <span class="contest-form__additional-item-number">2</span>
-                <input class="contest-form__text-input  contest-form__text-input--additional" type="text" name="companion2-name" placeholder="Введите ваше имя" required id="companion2-name">
-              </div>
-              <div class="contest-form__add-second-item-wrap">
-                <label class="contest-form__label  contest-form__label--add-second" for="companion2-nickname">ПРОЗВИЩЕ:</label>
-                <input class="contest-form__text-input  contest-form__text-input--add-second" type="text" name="companion2-nickname" placeholder="Ну как же без этого!" id="companion2-nickname">
-              </div>
-              <a href="#" class="contest-form__del-item-btn">удалить</a>
             </div>
           </fieldset>
 
@@ -174,7 +176,7 @@
             <input class="contest-form__add-file" type=file name=add-photo id="add-photo" multiple>
             <div class="contest-form__delimiter-files"></div>
 
-            <div class="contest-form__image-previews-wrap">
+            <div class="contest-form__image-previews-wrap  photo-previews">
               <figure class="image-preview">
                 <img class="image-preview__picture" src="img/img-1.jpg" width="67" height="67" alt="img-1">
                 <figcaption class="image-preview__title">IMG-1.JPG</figcaption>
@@ -248,7 +250,24 @@
         </div>
       </footer>
 
+      <script id="add-people-template" type="text/html">
+        <div class="contest-form__item  contest-form__item--additional-item">
+          <div class="contest-form__add-item-wrap">
+            <span class="contest-form__text">№</span>
+            <label class="contest-form__label  contest-form__label--additional" for="companion{{personNumber}}-name">Имя: *</label>
+            <span class="contest-form__additional-item-number">{{personNumber}}</span>
+            <input class="contest-form__text-input  contest-form__text-input--additional" type="text" name="companion{{personNumber}}-name" placeholder="Введите ваше имя" required id="companion{{personNumber}}-name">
+          </div>
+          <div class="contest-form__add-second-item-wrap">
+            <label class="contest-form__label  contest-form__label--add-second" for="companion{{personNumber}}-nickname">ПРОЗВИЩЕ:</label>
+            <input class="contest-form__text-input  contest-form__text-input--add-second" type="text" name="companion{{personNumber}}-nickname" placeholder="Ну как же без этого!" id="companion{{personNumber}}-nickname">
+          </div>
+          <a href="#" class="contest-form__del-item-btn">удалить</a>
+        </div>
+      </script>
+
       <script src="js/script.min.js"></script>
+
     </div>
   </body>
 </html>
