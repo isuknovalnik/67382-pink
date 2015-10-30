@@ -1,6 +1,7 @@
 var link = document.querySelector(".main-nav__toggle");
 var header = document.querySelector(".main-header");
 var menu = document.querySelector(".main-nav__list");
+var form = document.querySelector(".contest-form");
 var daysNumber = document.querySelector("#travel-days");
 var daysDecr = document.querySelector(".decrease-days");
 var daysIncr = document.querySelector(".increase-days");
@@ -99,13 +100,19 @@ if (daysNumber) {
 // Количество попутчиков
 if (peopleNumber) {
   var peopleCounter = parseInt(peopleNumber.value, 10);
+  var area = form.querySelector(".contest-form__add-items-area");
+  var template = document.querySelector("#add-people-template").innerHTML;
 
   peopleIncr.addEventListener("click", function(event) {
     event.preventDefault();
     peopleCounter++;
-      if (peopleCounter > 10) {
-       peopleCounter = 10;
-      }
+
+    if (peopleCounter > 10) {
+      peopleCounter = 10;
+    } else {
+      addPerson(peopleCounter);
+    }
+
     peopleNumber.value = peopleCounter + " чел";
 
   });
@@ -115,6 +122,8 @@ if (peopleNumber) {
     peopleCounter--;
     if (peopleCounter < 0) {
        peopleCounter = 0;
+    } else {
+      delPerson ();
     }
 
     peopleNumber.value = peopleCounter + " чел";
@@ -132,12 +141,25 @@ if (peopleNumber) {
 
     peopleNumber.value = peopleCounter + " чел";
 });
+  
+
+  function addPerson(counter) {
+
+    var html = Mustache.render(template, {
+      "personNumber": String(counter)
+    });
+    area.innerHTML = area.innerHTML + html;
+  
+  }
+  
+  function delPerson() {
+    var lastPerson = area.lastElementChild;
+    area.removeChild(lastPerson);
+  }
 
 }
 
 // Отправка формы
-var form = document.querySelector(".contest-form");
-
 if (form) {
 
   (function() {
