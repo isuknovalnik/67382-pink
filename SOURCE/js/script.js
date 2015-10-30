@@ -134,3 +134,76 @@ if (peopleNumber) {
 });
 
 }
+
+// Отправка формы
+var form = document.querySelector(".contest-form");
+
+if (form) {
+
+  (function() {
+
+    if (!("FormData" in window)) {
+      return;
+    }
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+    var data = new FormData(form);
+
+    request(data, function(response) {
+      console.log(response);
+    });
+
+    function request(data, fn) {
+
+      var xhr = new XMLHttpRequest();
+      var time = (new Date()).getTime();
+      xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
+
+      xhr.addEventListener("readystatechange", function() {
+      if (xhr.readyState == 4) {
+        console.log(xhr.responseText);
+      }
+    });
+      xhr.send(data);
+    }
+   });
+
+  })();
+
+  // Загрузка картинок
+
+  (function() {
+    var form = document.querySelector(".contest-form");
+
+    form.querySelector("#add-photo").addEventListener("change", function() {
+      var files = this.files;
+
+      for (var i = 0; i < files.length; i++) {
+        preview(files[i]);
+      }
+    });
+
+    function preview(file) {
+      if ("FileReader" in window) {
+        var area = document.querySelector(".photo-previews");
+
+        if (file.type.match(/image.*/)) {
+          var reader = new FileReader();
+
+          reader.addEventListener("load", function(event) {
+            var img = document.createElement("img"); 
+            img.src = event.target.result;
+            img.alt = file.name;
+            img.width = "135";
+            area.appendChild(img);
+          });
+
+          reader.readAsDataURL(file);
+        }
+      }
+    }
+  })();
+
+}
