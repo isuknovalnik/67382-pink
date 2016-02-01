@@ -1,17 +1,16 @@
 {
   "name": "67382-pink",
   "version": "0.1.0",
-  "private": true,
   "description": "Обучающий проект «pink» от HTML Academy",
   "author": "Инна Сукновальник",
   "repository": {
     "type": "git",
-    "url": "git://github.com/up-htmlacademy/67382-pink.git"
+    "url": "git://github.com/isuknovalnik/67382-pink.git"
   },
   "bugs": {
-    "url": "https://github.com/up-htmlacademy/67382-pink/issues"
+    "url": "https://github.com/isuknovalnik/67382-pink/issues"
   },
-  "homepage": "https://github.com/up-htmlacademy/67382-pink",
+  "homepage": "https://github.com/isuknovalnik/67382-pink",
   "dependencies": {
     "autoprefixer": "6.0.x",
     "grunt": "0.4.x",
