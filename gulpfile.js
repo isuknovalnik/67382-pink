@@ -1,11 +1,18 @@
 var gulp = require("gulp");
 
+var ghPages = require('gulp-gh-pages');
+
 var less = require("gulp-less");
 var cmq = require("gulp-combine-mq");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var minify = require("gulp-minify-css");
 var rename = require("gulp-rename");
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
 
 gulp.task("build", function() {
   gulp.src("source/less/style.less")
