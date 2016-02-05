@@ -110,7 +110,7 @@ module.exports = function(grunt) {
     
     'jsmin-sourcemap': {
       all: {
-        src: ['source/js/script.js', 'source/js/mustache.min.js'],
+        src: ['source/js/script.js', 'lib/mustache.min.js'],
         dest: 'build/js/script.min.js'
       },
     }
