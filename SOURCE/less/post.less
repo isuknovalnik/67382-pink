@@ -1,0 +1,73 @@
+.post-page-header {
+  min-height: 237px;
+  max-width: @desktop;
+  margin: 0 auto;
+
+  background-color: @dark-dark-grey;
+  background-image: url("../img/background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/background-mobile@2x.jpg");
+  }
+  
+  @media (min-resolution: 2.25dppx) {
+    background-image: url("../img/background-mobile@3x.jpg");
+  }
+  
+  @media (min-width: @mobile) {
+    min-height: 440px;
+    background-image: url("../img/background-tablet@1x.jpg");
+    
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      background-image: url("../img/background-tablet@2x.jpg");
+    }
+  }
+  
+  @media (min-width: @tablet) {
+    min-height: 394px;
+    background-image: url("../img/background-fullsize.jpg");
+    background-size: 100%;
+  }
+  
+  @media (min-width: @desktop) {
+    background: none;
+  }
+  
+  &-wide-wrap {
+    background: none;
+    
+    @media (min-width: @desktop) {
+      background-color: @dark-dark-grey;
+      background-image: url("../img/background-fullsize.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+      
+    }
+  }
+  
+  &__text {
+    width: 230px;
+    margin: 0;
+    .large-text;
+    color: @light-text;
+    padding-top: 32px;
+    
+    @media (min-width: @mobile) {
+      width: 500px;
+      padding-top: 70px;
+      font-size: @w-page-title-font;
+      line-height: @w-page-title-line;
+    }
+    
+    @media (min-width: @tablet) {
+      width: 780px;
+      padding-top: 63px;
+    }
+  }
+  
+}
