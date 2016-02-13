@@ -58,16 +58,40 @@
     padding-top: 32px;
     
     @media (min-width: @mobile) {
-      width: 600px;
+//      width: 600px;
+      width: 85.714%;
       padding-top: 70px;
+      font-size: @w-large-font;
+      line-height: @w-large-line;
+    }
+    
+    @media (min-width: @fix-tablet) {
       font-size: @w-page-title-font;
       line-height: @w-page-title-line;
     }
     
     @media (min-width: @tablet) {
       width: 780px;
+//      width: 65%;
       padding-top: 63px;
     }
+  }
+  
+}
+
+.blog-page-content-wrap {
+  max-width: @desktop;
+  margin: 0 auto;
+  padding: 0;
+  background-color: @light-fill;
+  padding-top: 11px;
+  
+  @media (min-width: @mobile) {
+    padding-top: 48px;
+  }
+  
+  @media (min-width: @tablet) {
+    padding-top: 54px;
   }
   
 }
@@ -75,16 +99,18 @@
 .blog-items {
 
   width: 280px;
-  max-width: 1200px;
   margin: 0 auto;
-  margin-top: 11px;
   margin-bottom: 65px;
   background-color: @light-fill;
   
   @media (min-width: @mobile) {
     width: 88.57%;
-    margin-top: 48px;
     margin-bottom: 78px;
+  }
+  
+  @media (min-width: @tablet) {
+    width: 80%;
+    margin-bottom: 63px;
   }
   
   &__pagination {
@@ -99,6 +125,11 @@
       width: 80.645%;
       margin: 0 auto;
       margin-top: 57px;
+    }
+    
+    @media (min-width: @tablet) {
+      width: 85.417%;
+      margin-top: 92px;
     }
     
     &::before {
@@ -176,6 +207,11 @@
     padding-top: 45px;
   }
   
+  @media (min-width: @tablet) {
+    width: 85.417%;
+    padding-top: 50px;
+  }
+
   &__title {
     position: relative;
     margin: 0;
@@ -183,10 +219,21 @@
     font-size: @title-font;
     line-height: @blog-line;
     font-weight: 700;
+    text-decoration: none;
     
     @media (min-width: @mobile) {
       font-size: @blog-title;
       line-height: @higher-line;
+    }
+    
+    &:hover {
+      color: @pink-color;
+      text-decoration: underline;
+    }
+    
+    &:active {
+      color: @pink-light;
+      text-decoration: none;
     }
     
     &::before {
@@ -251,10 +298,10 @@
     border-bottom: 2px dotted @border-light-grey;
   }
 
-/*  @media (min-width: @tablet) {
-    width: 87.234%;
-    margin-bottom: 28px;
-  } */
+  @media (min-width: @tablet) {
+    width: 85.417%;
+    height: 25px;
+  }
 }
 
 
