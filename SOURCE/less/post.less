@@ -77,6 +77,14 @@
   
 }
 
+.post-page-content-wrap {
+  max-width: @desktop;
+  margin: 0 auto;
+  padding: 0;
+  background-color: @light-fill;
+}
+
+
 .post {
   width: 280px;
   margin: 0 auto;
@@ -85,6 +93,10 @@
   @media (min-width: @mobile) {
     width: 100%;
     margin-bottom: 47px;
+  }
+  
+  @media (min-width: @tablet) {
+    margin-bottom: 49px;
   }
 
   &__header {
@@ -112,6 +124,11 @@
       font-size: @w-page-title-font;
       line-height: @w-page-title-line;
     }
+    
+    @media (min-width: @tablet) {
+      width: 85.366%;
+      padding-top: 98px;
+    }
   }
   
   &-delimiter {
@@ -126,11 +143,6 @@
       height: 30px;
       border-bottom: 2px dotted @border-light-grey;
     }
-
-/*    @media (min-width: @tablet) {
-      width: 85.417%;
-      height: 25px;
-    } */
     
   }
   
@@ -174,6 +186,10 @@
       line-height: @blog-title-line;
     }
     
+    @media (min-width: @tablet) {
+      width: 95.122%;
+    }
+    
   }
   
   &-paragraph__title {
@@ -206,6 +222,19 @@
       padding-bottom: 7px;
       font-size: @title-font;
       line-height: @higher-line;
+    }
+    
+    & a {
+      color: @pink-color;
+      
+      &:hover {
+        color: @text-color;
+      }
+      
+      &:active {
+        color: @pink-light;
+        text-decoration: none;
+      }
     }
     
   }
@@ -303,6 +332,11 @@
   @media (min-width: @mobile) {
     width: 88.57%;
   }
+  
+  @media (min-width: @tablet) {
+    width: 68.333%;
+    margin-bottom: 0;
+  }
 
   &__buttons {
     width: 100%;
@@ -332,6 +366,10 @@
     @media (min-width: @mobile) {
       margin-bottom: 12px;
     }
+    
+    @media (min-width: @tablet) {
+      margin-bottom: 6px;
+    }
 
     &:hover {
      border-color: @dark-grey;
@@ -348,6 +386,10 @@
         width: 47.742%;
         order: 2;
       }
+      
+      @media (min-width: @tablet) {
+        width: 33.17%;
+      }
 
     }
     
@@ -360,6 +402,10 @@
         order: 1;
         margin-right: 0;
       }
+      
+      @media (min-width: @tablet) {
+        width: 31.22%;
+      }
     }
     
     &--next{
@@ -368,6 +414,10 @@
       @media (min-width: @mobile) {
         width: 21.935%;
         order: 3;
+      }
+      
+      @media (min-width: @tablet) {
+        width: 31.22%;
       }
 
     }
