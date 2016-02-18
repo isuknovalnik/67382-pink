@@ -81,6 +81,19 @@
   width: 280px;
   margin: 0 auto;
   margin-bottom: 34px;
+
+  @media (min-width: @mobile) {
+    width: 100%;
+    margin-bottom: 47px;
+  }
+
+  &__header {
+    
+    @media (min-width: @mobile) {
+      position: relative;
+    }
+    
+  }
   
   &__title {
     width: 270px;
@@ -94,9 +107,10 @@
     text-align: center;
     
     @media (min-width: @mobile) {
+      width: 74.196%;
+      padding-top: 77px;
       font-size: @w-page-title-font;
       line-height: @w-page-title-line;
-      // авто и 30 ??? см!!!!
     }
   }
   
@@ -107,16 +121,17 @@
     background: none;
     border-bottom: 1px solid @border-light-grey;
     
-/*  @media (min-width: @mobile) {
-      width: 80.645%;
-      height: 22px;
+    @media (min-width: @mobile) {
+      width: 100%;
+      height: 30px;
       border-bottom: 2px dotted @border-light-grey;
     }
 
-    @media (min-width: @tablet) {
+/*    @media (min-width: @tablet) {
       width: 85.417%;
       height: 25px;
     } */
+    
   }
   
   &__date {
@@ -131,6 +146,11 @@
     text-align: center;
     
     @media (min-width: @mobile) {
+      position: absolute;
+      width: 100%;
+      padding: 0;
+      left: 0;
+      bottom: -45px;
       font-size: @base-font;
       line-height: @higher-line;
     }
@@ -148,6 +168,8 @@
     text-align: center;
     
     @media (min-width: @mobile) {
+      width: 100%;
+      padding-top: 25px;
       font-size: @large-font;
       line-height: @blog-title-line;
     }
@@ -164,6 +186,7 @@
     text-transform: uppercase;
     
     @media (min-width: @mobile) {
+      padding-top: 51px;
       font-size: @large-font;
     }
     
@@ -179,6 +202,8 @@
     font-weight: 400;
     
     @media (min-width: @mobile) {
+      padding-top: 22px;
+      padding-bottom: 7px;
       font-size: @title-font;
       line-height: @higher-line;
     }
@@ -192,6 +217,12 @@
       padding-top: 5px;
       padding-left: 22px;
       list-style-type: none;
+      
+      @media (min-width: @mobile) {
+        padding-top: 3px;
+        padding-left: 36px;
+        padding-bottom: 28px;
+      }
     }
     
     & li {
@@ -200,6 +231,12 @@
       padding-bottom: 7px;
       font-size: @base-font;
       line-height: @blog-line;
+      
+      @media (min-width: @mobile) {
+        padding-bottom: 10px;
+        font-size: @title-font;
+        line-height: @higher-line;
+      }
       
       &::before {
         position: absolute;
@@ -211,6 +248,11 @@
         height:0;
         border: 3px solid @pink-color;
         border-radius:50%;
+        
+        @media (min-width: @mobile) {
+          left: -36px;
+          top: 34px;
+        }
       }
     }
     
@@ -228,6 +270,14 @@
       font-size: @base-font;
       line-height: @blog-line;
       border-left: 2px solid @pink-color;
+      
+      @media (min-width: @mobile) {
+        padding-left: 34px;
+        margin-top: 23px;
+        margin-bottom: 6px;
+        font-size: @title-font;
+        line-height: @higher-line;
+      }
     }
     
     & cite {
@@ -235,6 +285,11 @@
       font-size: @base-font;
       line-height: @blog-line;
       font-style: italic;
+      
+      @media (min-width: @mobile) {
+        font-size: @title-font;
+        line-height: @higher-line;
+      }
     }
     
   }
@@ -244,8 +299,22 @@
   width: 280px;
   margin: 0 auto;
   margin-bottom: 14px;
+  
+  @media (min-width: @mobile) {
+    width: 88.57%;
+  }
 
+  &__buttons {
+    width: 100%;
+    
+    @media (min-width: @mobile) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
   &__btn {
+    display: inline-block;
     padding-top: 14px;
     padding-bottom: 15px;
     margin-bottom: 20px;
@@ -255,9 +324,14 @@
     line-height: @higher-line;
     font-weight: 700;
     text-transform: uppercase;
+    text-decoration: none;
     text-align: center;
     border: 2px solid @border-light-grey;
     outline: none;
+    
+    @media (min-width: @mobile) {
+      margin-bottom: 12px;
+    }
 
     &:hover {
      border-color: @dark-grey;
@@ -268,16 +342,34 @@
     }
     
     &--return {
-      width: 280px;
+      width: 276px;
+      
+      @media (min-width: @mobile) {
+        width: 47.742%;
+        order: 2;
+      }
+
     }
     
     &--prev {
-      width: 130px;
+      width: 126px;
       margin-right: 16px;
+      
+      @media (min-width: @mobile) {
+        width: 21.935%;
+        order: 1;
+        margin-right: 0;
+      }
     }
     
     &--next{
-      width: 130px;
+      width: 126px;
+      
+      @media (min-width: @mobile) {
+        width: 21.935%;
+        order: 3;
+      }
+
     }
   }
 
