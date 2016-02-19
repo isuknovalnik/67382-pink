@@ -147,7 +147,7 @@
   }
   
   &__date {
-    width: 270px;
+    width: 280px;
     margin: 0 auto;
     padding-top: 17px;
     color: @pink-color;
@@ -158,13 +158,21 @@
     text-align: center;
     
     @media (min-width: @mobile) {
-      position: absolute;
-      width: 100%;
-      padding: 0;
-      left: 0;
-      bottom: -45px;
+      background-color: @light-fill;
       font-size: @base-font;
       line-height: @higher-line;
+    }
+    
+    &-wrap {
+      
+      @media (min-width: @mobile) {
+        position: absolute;
+        width: 100%;
+        padding: 0;
+        left: 0;
+        bottom: -45px;
+      }
+      
     }
   }
   
