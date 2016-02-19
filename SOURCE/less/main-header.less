@@ -241,9 +241,19 @@
     }
     
     &--active a {
+      color: @border-menu;
+      cursor: default;
+      
+      &:hover {
+        color: @border-menu;
+      }
+      
+      &:active {
+        color: @border-menu;
+      }
+      
       @media (min-width: @tablet) {
         color: @pink-color;
-        cursor: default;
         
         &:hover {
           color: @pink-color;
