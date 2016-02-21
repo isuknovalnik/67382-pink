@@ -161,6 +161,9 @@ if (peopleNumber) {
 
 // Отправка формы
 if (form) {
+  var areaPics = form.querySelector(".photo-previews");
+  var templatePics = document.querySelector("#image-template").innerHTML;
+  var queue = [];
 
   (function() {
 
@@ -170,34 +173,39 @@ if (form) {
 
     form.addEventListener("submit", function(event) {
       event.preventDefault();
+      var data = new FormData(form);
 
-    var data = new FormData(form);
+     queue.forEach(function(element) {
+       data.append("add-photo", element.file);
+     });
+      
+      request(data, function(response) {
+        console.log(response);
+      });
 
-    request(data, function(response) {
-      console.log(response);
-    });
+      function request(data, fn) {
 
-    function request(data, fn) {
+        var xhr = new XMLHttpRequest();
+        var time = (new Date()).getTime();
+        xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
 
-      var xhr = new XMLHttpRequest();
-      var time = (new Date()).getTime();
-      xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
-
-      xhr.addEventListener("readystatechange", function() {
-      if (xhr.readyState == 4) {
-        console.log(xhr.responseText);
+        xhr.addEventListener("readystatechange", function() {
+          if (xhr.readyState == 4) {
+            console.log(xhr.responseText);
+          }
+        });
+        xhr.send(data);
       }
     });
-      xhr.send(data);
-    }
-   });
 
   })();
 
   // Загрузка картинок
 
   (function() {
-    var form = document.querySelector(".contest-form");
+    if (!("FormData" in window)) {
+      return;
+    }
 
     form.querySelector("#add-photo").addEventListener("change", function() {
       var files = this.files;
@@ -205,27 +213,51 @@ if (form) {
       for (var i = 0; i < files.length; i++) {
         preview(files[i]);
       }
+      this.value = "";
     });
 
     function preview(file) {
       if ("FileReader" in window) {
-        var area = document.querySelector(".photo-previews");
 
         if (file.type.match(/image.*/)) {
           var reader = new FileReader();
 
           reader.addEventListener("load", function(event) {
-            var img = document.createElement("img"); 
-            img.src = event.target.result;
-            img.alt = file.name;
-            img.width = "135";
-            area.appendChild(img);
+            var html = Mustache.render(templatePics, {
+              "image": event.target.result,
+              "name": file.name
+            });
+
+            var figure = document.createElement("figure");
+            figure.classList.add("image-preview");
+            figure.innerHTML = html;
+
+            areaPics.appendChild(figure);
+            
+            figure.querySelector(".image-preview__close-link").addEventListener("click", function(event) {
+              event.preventDefault();
+              removePreview(figure);
+            });
+
+            queue.push({
+              "file": file,
+              "figure": figure
+            });
+            
           });
 
           reader.readAsDataURL(file);
         }
       }
     }
+    
+    function removePreview(figure) {
+      queue = queue.filter(function(element) {
+        return element.figure != figure;
+      });
+      figure.parentNode.removeChild(figure);
+    }
+    
   })();
 
 }
