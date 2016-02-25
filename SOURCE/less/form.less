@@ -311,7 +311,17 @@
   
   &__image-previews-wrap {
     font-size: 0;
-
+    
+    padding-bottom: 9px;
+    
+    @media (min-width: @mobile) {
+      padding-bottom: 16px;
+    }
+    
+    @media (min-width: @tablet) {
+      padding-bottom: 36px;
+    }
+    
   }
   
   &__additional-item-number {
@@ -1134,6 +1144,7 @@ margin-top: 47px;;
     margin: 0;
     margin-top: 22px;
     margin-left: 56px;
+    margin-bottom: 0;
   }
   
   &__picture {
@@ -1147,7 +1158,7 @@ margin-top: 47px;;
   }
   
   &__title {
-    max-width: 80px;
+    max-width: 67px;
     color: @text-color;
     font-size: @small-font;
     line-height: @low-line;
@@ -1156,7 +1167,7 @@ margin-top: 47px;;
     overflow: hidden;
     
     @media (min-width: @mobile) {
-      max-width: 145px;
+      max-width: 120px;
       font-size: @base-font;
       line-height: @base-line;
     }
