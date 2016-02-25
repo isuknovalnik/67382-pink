@@ -17,22 +17,22 @@
             <a class="main-header__logo-link" href="#">pink</a>
             <a class="main-nav__toggle  main-nav__toggle--open" href="#">menu</a>
           </div>
-            <nav class="main-nav">
-              <ul class="main-nav__list">
-                <li class="main-nav__item">
-                  <a href="index.html">Информация</a>
-                </li>
-                <li class="main-nav__item">
-                  <a href="blog.html">Блог</a>
-                </li>
-                <li class="main-nav__item">
-                  <a href="#">Отзывы</a>
-                </li>
-                <li class="main-nav__item  main-nav__item--active">
-                  <a href="#">Конкурс</a>
-                </li>
-              </ul>
-            </nav>
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="index.html">Информация</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="blog.html">Блог</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#">Отзывы</a>
+              </li>
+              <li class="main-nav__item  main-nav__item--active">
+                <a href="#">Конкурс</a>
+              </li>
+            </ul>
+          </nav>
         </header>
         <h2 class="contest-page-header__text">Конкурс на самое безбашенное путешествие с Пинк</h2>
       </div>
@@ -176,55 +176,7 @@
             <input class="contest-form__add-file" type=file name=add-photo id="add-photo" multiple>
             <div class="contest-form__delimiter-files"></div>
 
-            <div class="contest-form__image-previews-wrap  photo-previews">
-              <figure class="image-preview">
-                <img class="image-preview__picture" src="img/img-1.jpg" width="67" height="67" alt="img-1">
-                <figcaption class="image-preview__title">IMG-1.JPG</figcaption>
-                <a class="image-preview__close-link" href="#">&times;</a>
-              </figure>
-
-              <figure class="image-preview">
-                <img class="image-preview__picture" src="img/img-2.jpg" width="67" height="67" alt="img-2">
-                <figcaption class="image-preview__title">IMG-2.JPG</figcaption>
-                <span class="image-preview__close-link">&times;</span>
-              </figure>
-
-              <figure class="image-preview">
-                <img class="image-preview__picture" src="img/img-3.jpg" width="67" height="67" alt="img-3">
-                <figcaption class="image-preview__title">IMG-3.JPG</figcaption>
-                <span class="image-preview__close-link" href="#">&times;</span>
-              </figure>
-
-              <figure class="image-preview">
-                <img class="image-preview__picture" src="img/img-4.jpg" width="67" height="67" alt="img-4">
-                <figcaption class="image-preview__title">IMG-4.JPG</figcaption>
-                <span class="image-preview__close-link" href="#">&times;</span>
-              </figure>
-
-              <figure class="image-preview">
-                <img class="image-preview__picture" src="img/img-5.jpg" width="67" height="67" alt="img-5">
-                <figcaption class="image-preview__title">IMG-5.JPG</figcaption>
-                <span class="image-preview__close-link" href="#">&times;</span>
-              </figure>
-
-              <figure class="image-preview">
-                <img class="image-preview__picture" src="img/img-6.jpg" width="67" height="67" alt="img-5">
-                <figcaption class="image-preview__title">IMG-6.JPG</figcaption>
-                <span class="image-preview__close-link" href="#">&times;</span>
-              </figure>
-
-              <figure class="image-preview">
-                <img class="image-preview__picture" src="img/img-7.jpg" width="67" height="67" alt="img-7">
-                <figcaption class="image-preview__title">IMG-7.JPG</figcaption>
-                <span class="image-preview__close-link" href="#">&times;</span>
-              </figure>
-
-              <figure class="image-preview">
-                <img class="image-preview__picture" src="img/img-8.jpg" width="67" height="67" alt="img-8">
-                <figcaption class="image-preview__title">IMG-8.JPG</figcaption>
-                <span class="image-preview__close-link" href="#">&times;</span>
-              </figure>
-            </div>
+            <div class="contest-form__image-previews-wrap  photo-previews"></div>
           </fieldset>
 
           <div class="contest-form__submit-wrap">
@@ -265,7 +217,15 @@
           <a href="#" class="contest-form__del-item-btn">удалить</a>
         </div>
       </script>
-
+      
+      <script id="image-template" type="text/html">
+<!--        <figure class="image-preview"> -->
+          <img class="image-preview__picture" src="{{image}}" alt="{{name}}" title="{{name}}">
+          <figcaption class="image-preview__title">{{name}}</figcaption>
+          <a class="image-preview__close-link" href="#">&times;</a>
+<!--        </figure> -->
+      </script>
+      
       <script src="js/script.min.js"></script>
 
     </div>
